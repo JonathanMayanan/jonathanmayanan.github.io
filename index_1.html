@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan Mayanan — Electrical Engineer & AV Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --slate: #1e3a5f;
+    --gold: #2563eb;
+    --gold-light: #5b8def;
+    --cream: #f7f4ef;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --white: #ffffff;
+    --border: #e2ddd6;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,31,61,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    align-items: center;
+    padding: 80px 6rem 4rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(37,99,235,0.12);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(37,99,235,0.08);
+  }
+  .hero-text { position: relative; z-index: 1; }
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .hero-summary {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.85);
+    padding: 0.85rem 2rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* PHOTO */
+  .hero-photo {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .photo-frame {
+    position: relative;
+    width: 320px; height: 320px;
+  }
+  .photo-frame::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px; right: 12px; bottom: 12px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    opacity: 0.4;
+  }
+  .photo-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 4px;
+    display: block;
+    filter: grayscale(15%) contrast(1.05);
+  }
+  .photo-badge {
+    position: absolute;
+    bottom: -16px; right: -16px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 1rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* HERO CIRCUIT COLUMN */
+  .hero-circuit-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 15px rgba(255,240,150,0.4));
+    animation: circuit-glow 5s ease-in-out infinite;
+  }
+  @keyframes circuit-glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* CERT STRIP */
+  .cert-strip {
+    background: var(--slate);
+    padding: 1.2rem 6rem;
+    display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap;
+  }
+  .cert-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    white-space: nowrap;
+  }
+  .cert-item {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(37,99,235,0.3);
+    border-radius: 2px;
+  }
+
+  /* SECTIONS */
+  section { padding: 5rem 6rem; }
+  section:nth-child(even) { background: var(--white); }
+  .section-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-label::before {
+    content: '';
+    display: block; width: 24px; height: 1px;
+    background: #1a1a2e;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p { color: #3a3a4a; margin-bottom: 1.2rem; font-size: 1rem; }
+  .stats-col { display: flex; flex-direction: column; gap: 1.5rem; }
+  .stat-box {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.2rem;
+  }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .stat-desc { font-size: 0.85rem; color: #4a4a5a; margin-top: 0.2rem; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .skill-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold);
+    padding: 1.5rem;
+    border-radius: 2px;
+  }
+  .skill-card h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.65rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: #3a3a4a;
+  }
+
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .exp-item::before {
+    content: '';
+    position: absolute;
+    left: 188px;
+    top: 2.8rem;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .exp-meta { padding-top: 0.2rem; }
+  .exp-date {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .exp-company {
+    font-size: 0.85rem;
+    color: #4a4a5a;
+    margin-top: 0.3rem;
+  }
+  .exp-content h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .exp-location {
+    font-size: 0.8rem;
+    color: #4a4a5a;
+    margin-bottom: 1rem;
+  }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li {
+    font-size: 0.9rem;
+    color: var(--text);
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute; left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 0.15em;
+  }
+
+  /* AV SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .service-card {
+    background: var(--navy);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+  }
+  .service-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .service-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+  .service-card p { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.7; }
+
+  /* EDUCATION */
+  .edu-block {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 3rem;
+  }
+  .edu-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    background: var(--white);
+  }
+  .edu-degree {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+  .edu-school { font-size: 0.92rem; color: #1a1a2e; font-weight: 400; }
+  .edu-year { font-size: 0.82rem; color: #2563eb; margin-top: 0.5rem; letter-spacing: 0.06em; font-weight: 500; }
+  .cert-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .cert-row {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    font-size: 0.92rem; color: #1a1a2e;
+    padding: 0.75rem;
+    background: var(--cream);
+    border-radius: 2px;
+  }
+  .cert-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0; margin-top: 0.4em;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy) !important;
+    color: var(--white);
+  }
+  .contact-section h2 { color: var(--white); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-row { display: flex; align-items: center; gap: 1rem; }
+  .contact-icon {
+    width: 40px; height: 40px;
+    border: 1px solid rgba(37,99,235,0.4);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .contact-detail a, .contact-detail span {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .contact-detail a:hover { color: var(--gold-light); }
+  .contact-note {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+    max-width: 420px;
+  }
+
+  /* CONTACT FORM */
+  .contact-form {
+    display: flex; flex-direction: column; gap: 1.2rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-weight: 400;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+    background: rgba(201,151,58,0.06);
+  }
+  .form-group select option { background: var(--navy); color: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 130px; }
+  .form-submit {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .btn-submit {
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .form-status {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    min-height: 1.4em;
+  }
+  .form-status.success { color: #6ee7b7; }
+  .form-status.error { color: #fca5a5; }
+
+  /* FOOTER */
+  footer {
+    background: #080f1e;
+    color: rgba(255,255,255,0.35);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+
+  .skills-section { padding: 3rem 6rem; }
+  @media (max-width: 900px) { .skills-section { padding: 2rem 2rem; } }
+  @media (max-width: 600px) { .skills-section { padding: 2rem 1.25rem; } }
+  @media (max-width: 380px) { .skills-section { padding: 2rem 1rem; } }
+
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(15,31,61,0.98);
+    backdrop-filter: blur(12px);
+    z-index: 99;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(37,99,235,0.2);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* TABLET — 900px */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 90px 2rem 4rem;
+      gap: 2.5rem;
+      text-align: center;
+    }
+    .hero-text { display: flex; flex-direction: column; align-items: center; }
+    .hero-eyebrow { justify-content: center; }
+    .hero-summary { text-align: center; }
+    .hero-cta { justify-content: center; }
+    .hero-circuit-col { display: none; }
+    .hero-photo { order: -1; justify-content: center; }
+    .photo-frame { width: 200px; height: 200px; }
+    .photo-badge { font-size: 0.7rem; padding: 0.5rem 0.8rem; }
+
+    section { padding: 3.5rem 2rem; }
+    .cert-strip { padding: 1.2rem 2rem; gap: 1rem; flex-wrap: wrap; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .stats-col { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+    .stat-box { flex: 1; min-width: 120px; }
+
+    .edu-block { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    .exp-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    .exp-item::before { display: none; }
+    .exp-meta { display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* MOBILE — 600px */
+  @media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; margin-bottom: 2rem; }
+
+    .photo-frame { width: 160px; height: 160px; }
+    .photo-frame::before { display: none; }
+    .photo-badge { display: none; }
+
+    .hero { padding: 80px 1.25rem 3rem; }
+    section { padding: 3rem 1.25rem; }
+    .cert-strip { padding: 1rem 1.25rem; }
+
+    .hero-cta { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-outline { text-align: center; width: 100%; }
+
+    .skills-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+
+    .exp-meta { flex-direction: column; gap: 0.1rem; }
+    .exp-content h3 { font-size: 1.05rem; }
+
+    .stat-num { font-size: 1.6rem; }
+
+    nav { padding: 0 1.25rem; }
+    .nav-logo { font-size: 1rem; }
+
+    .btn-submit { width: 100%; text-align: center; }
+
+    footer { padding: 1.2rem 1rem; font-size: 0.72rem; }
+  }
+
+  /* SMALL PHONES — 380px */
+  @media (max-width: 380px) {
+    h1 { font-size: 1.75rem; }
+    .photo-frame { width: 140px; height: 140px; }
+    section { padding: 2.5rem 1rem; }
+    .cert-strip { padding: 1rem; }
+    .cert-item { font-size: 0.72rem; padding: 0.2rem 0.6rem; }
+  }
+
+  @media (max-width: 600px) {
+    .form-group input,
+    .form-group textarea,
+    .form-group select { font-size: 16px; }
+  }
+  /* HERO & NAV GOLD OVERRIDES */
+  .nav-logo { color: #c9973a; }
+  .nav-links a:hover { color: #e8b96a; }
+  .mobile-menu a:hover { color: #c9973a; }
+  .hero-eyebrow { color: #c9973a; }
+  .hero-eyebrow::before { background: #c9973a; }
+  h1 em { color: #c9973a; }
+  .hero-summary { color: rgba(255,255,255,0.7); }
+  .hero .btn-primary { background: #c9973a; color: var(--navy); }
+  .hero .btn-primary:hover { background: #e8b96a; }
+  .hero .btn-outline:hover { border-color: #c9973a; color: #c9973a; }
+  .hero::before { border-color: rgba(201,151,58,0.12); }
+  .hero::after { border-color: rgba(201,151,58,0.08); }
+  .photo-frame::before { border-color: #c9973a; }
+  .photo-badge { background: #c9973a; color: var(--navy); }
+  .cert-strip .cert-item { border-color: rgba(201,151,58,0.3); }
+
+  /* SCROLL ANIMATIONS */
+  .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-logo">Jonathan Mayanan</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Available Services</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#services" onclick="closeMenu()">Available Services</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home"><div class="hero-text">
+    <div class="hero-eyebrow">Electrical Engineer & AV Professional</div>
+    <h1>Jonathan<br><em>Mayanan</em></h1>
+    <p class="hero-summary">Results-driven Electrical Engineer with 7+ years of hands-on experience maintaining, troubleshooting, and repairing mission-critical electrical and mechanical systems in high-uptime facility environments — plus deep expertise in live AV production and streaming.</p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+
+  <!-- Thunder bolt center -->
+  <div class="hero-circuit-col">
+    <svg viewBox="0 0 140 340" xmlns="http://www.w3.org/2000/svg" width="140" height="340">
+      <defs>
+        <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffe680"/>
+          <stop offset="25%" stop-color="#fff8d6"/>
+          <stop offset="60%" stop-color="#ffe680"/>
+          <stop offset="100%" stop-color="#e8b96a"/>
+        </linearGradient>
+        <filter id="boltGlow">
+          <feGaussianBlur stdDeviation="8" result="blur"/>
+          <feComposite in="blur" in2="blur" operator="over"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <filter id="sparkGlow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Background glow -->
+      <ellipse cx="70" cy="170" rx="55" ry="130" fill="rgba(255,246,200,0.1)" filter="url(#boltGlow)">
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0.5;0.9;0.5"/>
+      </ellipse>
+
+      <!-- Main thunder bolt -->
+      <polygon points="78,10 50,130 72,130 40,210 65,210 22,330 58,220 38,220 68,140 48,140 85,10"
+        fill="url(#boltGrad)" filter="url(#boltGlow)" opacity="1">
+        <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="1;0.85;1;0.9;1"/>
+      </polygon>
+
+      <!-- Bolt inner edge highlight -->
+      <polygon points="76,18 54,128 73,128 44,205 66,205 30,318 56,215 40,215 66,138 50,138 82,18"
+        fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+
+      <!-- Hot center line -->
+      <polyline points="80,15 52,130 70,130 42,210 64,210 26,325"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Secondary bolt (smaller, right side) -->
+      <polygon points="98,95 85,145 94,145 78,200 88,200 72,250 95,195 86,195 98,150 90,150 105,95"
+        fill="url(#boltGrad)" filter="url(#sparkGlow)" opacity="0.7">
+        <animate attributeName="opacity" dur="2.5s" repeatCount="indefinite" values="0.7;0.4;0.75;0.45;0.7"/>
+      </polygon>
+
+      <!-- Spark lines -->
+      <line x1="22" y1="175" x2="8" y2="168" stroke="#ffe680" stroke-width="2" opacity="0.8" filter="url(#sparkGlow)">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.8;0.3;0.8"/>
+      </line>
+      <line x1="20" y1="185" x2="5" y2="190" stroke="#ffe680" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" values="0.6;0.15;0.6"/>
+      </line>
+      <line x1="105" y1="120" x2="122" y2="112" stroke="#ffe680" stroke-width="2" opacity="0.8" filter="url(#sparkGlow)">
+        <animate attributeName="opacity" dur="1.8s" repeatCount="indefinite" values="0.8;0.3;0.8"/>
+      </line>
+      <line x1="108" y1="130" x2="125" y2="134" stroke="#ffe680" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" dur="2.2s" repeatCount="indefinite" values="0.6;0.15;0.6"/>
+      </line>
+      <line x1="30" y1="250" x2="15" y2="258" stroke="#ffe680" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      </line>
+      <line x1="75" y1="260" x2="90" y2="265" stroke="#ffe680" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" dur="2.6s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      </line>
+
+      <!-- Impact sparks at bottom -->
+      <circle cx="22" cy="330" r="4" fill="#ffffff" opacity="0.6" filter="url(#sparkGlow)">
+        <animate attributeName="r" dur="1.5s" repeatCount="indefinite" values="4;8;4"/>
+        <animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      </circle>
+      <circle cx="22" cy="330" r="10" fill="none" stroke="#ffe680" stroke-width="1" opacity="0.4">
+        <animate attributeName="r" dur="2s" repeatCount="indefinite" values="10;22;10"/>
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4;0;0.4"/>
+      </circle>
+    </svg>
+  </div>
+
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <img src="profile.jpg" alt="Jonathan Mayanan">
+      <div class="photo-badge">Philadelphia, PA</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT STRIP -->
+<div class="cert-strip">
+  <span class="cert-label">Certified</span>
+  <span class="cert-item">OSHA 10</span>
+  <span class="cert-item">NFPA 70E</span>
+  <span class="cert-item">Reliability Solutions — Essential Craft Skills</span>
+  <span class="cert-item">BS — ECET, NJIT</span>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <h2>The person behind<br>the work</h2>
+  <div class="about-grid fade-up">
+    <div class="about-text">
+      <p>I'm an Electrical Engineer based in the Philadelphia area with over 7 years of hands-on experience keeping complex electrical and mechanical systems running at peak performance. My background spans Amazon fulfillment centers, utility infrastructure, and GMP-regulated pharmaceutical environments.</p>
+      <p>I hold a Bachelor of Science in Electrical and Computer Engineering Technology from NJIT and carry certifications in OSHA 10 and NFPA 70E electrical safety. I specialize in troubleshooting 3-phase electrical systems, VFDs, motor controls, conveyor automation, and building infrastructure.</p>
+      <p>Outside of engineering, I'm deeply involved in live event and AV production — operating PTZ camera systems, video switchers, audio systems, and live streaming setups for church and venue environments. I bring the same technical precision to both worlds.</p>
+    </div>
+    <div class="stats-col">
+      <div class="stat-box">
+        <div class="stat-num">7+</div>
+        <div class="stat-desc">Years of engineering & maintenance experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4</div>
+        <div class="stat-desc">Major employers across pharma, utilities & logistics</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">BS</div>
+        <div class="stat-desc">Electrical & Computer Engineering Technology — NJIT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" style="background: var(--white);">
+  <div class="skills-grid fade-up">
+    <div class="skill-card">
+      <h3>Electrical Systems</h3>
+      <div class="skill-tags">
+        <span class="tag">3-Phase Power</span>
+        <span class="tag">Switchgear</span>
+        <span class="tag">UPS / PDUs</span>
+        <span class="tag">Transformers</span>
+        <span class="tag">Batteries</span>
+        <span class="tag">Motor Controls</span>
+        <span class="tag">VFDs & Starters</span>
+        <span class="tag">Relays</span>
+        <span class="tag">PLC Fundamentals</span>
+        <span class="tag">NFPA 70E</span>
+        <span class="tag">NEC Code</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Mechanical & Facilities</h3>
+      <div class="skill-tags">
+        <span class="tag">HVAC / Chillers</span>
+        <span class="tag">Pumps & Motors</span>
+        <span class="tag">Conveyor / MHE</span>
+        <span class="tag">Fire/Life Safety</span>
+        <span class="tag">Preventive Maintenance</span>
+        <span class="tag">Root Cause Analysis</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Tools & Documentation</h3>
+      <div class="skill-tags">
+        <span class="tag">CMMS / Work Orders</span>
+        <span class="tag">Multimeters / Meggars</span>
+        <span class="tag">Blueprint Reading</span>
+        <span class="tag">Technical Writing / SOPs</span>
+        <span class="tag">Microsoft Office Suite</span>
+        <span class="tag">OSHA 10</span>
+        <span class="tag">GMP</span>
+        <span class="tag">LOTO</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>AV & Technology</h3>
+      <div class="skill-tags">
+        <span class="tag">PTZ Cameras</span>
+        <span class="tag">Video Switching</span>
+        <span class="tag">OBS Streaming</span>
+        <span class="tag">Audio Setup & Diagnostics</span>
+        <span class="tag">Networking / IP</span>
+        <span class="tag">VISCA over IP</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <h2>Professional<br>background</h2>
+  <div class="exp-list">
+
+    <div class="exp-item fade-up">
+      <div class="exp-meta">
+        <div class="exp-date">Aug 2024 — Feb 2026</div>
+        <div class="exp-company">PCI Pharma Services</div>
+      </div>
+      <div class="exp-content">
+        <h3>Engineer</h3>
+        <div class="exp-location">Philadelphia, PA</div>
+        <ul class="exp-bullets">
+          <li>Led installation, setup, commissioning, and validation of packaging equipment including mechanical, electrical, and control instrumentation systems in a GMP-regulated facility</li>
+          <li>Performed troubleshooting and root cause analysis on electrical and mechanical equipment failures, restoring operations within internal SLAs to minimize production downtime</li>
+          <li>Conducted Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) for capital equipment projects, ensuring systems met performance and safety specifications</li>
+          <li>Provided subject matter expertise and hands-on training to mechanical technicians on equipment operation, maintenance procedures, and safety protocols</li>
+          <li>Managed equipment safety evaluations and performance testing, documenting results to support change management and regulatory compliance programs</li>
+          <li>Coordinated with cross-functional engineering teams, vendors, and customers during project meetings and on-site installations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item fade-up">
+      <div class="exp-meta">
+        <div class="exp-date">Sep 2022 — Dec 2023</div>
+        <div class="exp-company">Maryland Transportation Authority</div>
+      </div>
+      <div class="exp-content">
+        <h3>Electrical Engineer</h3>
+        <div class="exp-location">Baltimore, MD</div>
+        <ul class="exp-bullets">
+          <li>Installed, tested, and maintained 3-phase electrical distribution systems including switchgear, panelboards, transformers, feeders, and conduit runs across multiple critical infrastructure sites</li>
+          <li>Performed maintenance and troubleshooting on lighting systems, lighting contactors, pump motor controls, and electrical equipment in tunnel vaults, service buildings, and emergency facilities</li>
+          <li>Executed electrical work in mission-critical environments requiring 24/7 operational reliability for the Baltimore Harbor Tunnel system</li>
+          <li>Ensured all installations met NEC code requirements and organizational safety standards; coordinated with project engineers on scope, scheduling, and compliance documentation</li>
+          <li>Supported emergency electrical repairs and preventive maintenance programs to maintain continuous tunnel operations and public safety systems</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item fade-up">
+      <div class="exp-meta">
+        <div class="exp-date">Nov 2020 — Sep 2022</div>
+        <div class="exp-company">Amazon / JLL</div>
+      </div>
+      <div class="exp-content">
+        <h3>Reliability Engineer</h3>
+        <div class="exp-location">Florence, NJ</div>
+        <ul class="exp-bullets">
+          <li>Maintained and troubleshot mission-critical conveyor and robotic automation systems in a high-volume Amazon fulfillment center, ensuring 24/7 operational availability</li>
+          <li>Installed, maintained, and repaired 3-phase motors, VFDs, motor starters, control components, photo-eyes, limit switches, proximity sensors, solenoids, and relay systems</li>
+          <li>Led and audited preventive maintenance procedures for electrical and mechanical equipment, driving reliability improvements and reducing unplanned downtime</li>
+          <li>Created, tracked, and closed work orders in CMMS with detailed documentation of labor hours, parts usage, equipment conditions, and root cause findings</li>
+          <li>Developed training plans for incoming service technicians and created emergency repair work plans for critical asset failures</li>
+          <li>Maintained building rounds monitoring and recording data from electrical, mechanical, and control systems to support operational decision-making and KPI reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item fade-up">
+      <div class="exp-meta">
+        <div class="exp-date">Jun 2018 — Oct 2020</div>
+        <div class="exp-company">Amazon / C&W Services</div>
+      </div>
+      <div class="exp-content">
+        <h3>Reliability Engineer</h3>
+        <div class="exp-location">Carteret, NJ</div>
+        <ul class="exp-bullets">
+          <li>Performed preventive maintenance and emergency troubleshooting on Material Handling Equipment including conveyor belts, motors, photo-eyes, relays, and control systems in a 24/7 fulfillment facility</li>
+          <li>Completed preventive maintenance routines with thorough documentation, tracking equipment conditions and identifying recurring issues for root cause analysis</li>
+          <li>Troubleshot electrical and mechanical failures on production-critical systems, minimizing downtime and restoring operations within established SLAs</li>
+          <li>Managed department inventory tracking and parts storage, ensuring maintenance teams had access to critical spare parts and consumables</li>
+          <li>Promoted and enforced a safe working environment by following all safety procedures including lockout/tagout (LOTO), confined space, and electrical safety protocols</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AV SERVICES -->
+<section id="services" style="background: var(--cream);">
+  <div class="section-label">Available Services</div>
+  <h2>Available<br>services</h2>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <span class="service-icon">&#x1F3A5;</span>
+      <h3>PTZ Camera Systems</h3>
+      <p>Setup, configuration, and live operation of PTZ cameras including VISCA over IP control, auto-tracking, and multi-camera switching for live events and streams.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F39B;</span>
+      <h3>Audio Setup & Diagnostics</h3>
+      <p>Setup, configuration, and troubleshooting of audio systems for live events and venues. Signal flow tracing, cable diagnostics, speaker placement, gain staging, and resolving feedback and noise issues.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4FA;</span>
+      <h3>Video Switching & Streaming</h3>
+      <p>Multi-source video production using hardware switchers and OBS. Live streaming configuration, encoding, and broadcast to platforms including YouTube and Facebook Live.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F4A1;</span>
+      <h3>Lighting & Stage Setup</h3>
+      <p>Portable and permanent lighting solutions for auditoriums, sanctuaries, and live event venues. Equipment selection, positioning, and control for optimal stage presence.</p>
+    </div>
+  </div>
+  <p style="color: #4a4a5a; font-size: 0.9rem;">Available for church services, corporate events, and live productions in the greater Philadelphia area. <a href="#contact" style="color: #1a1a2e; text-decoration: none; font-weight: 500;">Contact me to discuss your project.</a></p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" style="background: var(--white);">
+  <div class="section-label">Education & Credentials</div>
+  <h2>Academic &<br>professional training</h2>
+  <div class="edu-block fade-up">
+    <div>
+      <div class="edu-card">
+        <div class="edu-degree">Bachelor of Science — Electrical & Computer Engineering Technology</div>
+        <div class="edu-school">New Jersey Institute of Technology (NJIT), Newark, NJ</div>
+        <div class="edu-year">Graduated May 2018</div>
+      </div>
+    </div>
+    <div>
+      <div class="cert-list">
+        <div class="cert-row"><div class="cert-dot"></div><span>OSHA 10-Hour Safety Certification</span></div>
+        <div class="cert-row"><div class="cert-dot"></div><span>NFPA 70E — Electrical Safety in the Workplace</span></div>
+        <div class="cert-row"><div class="cert-dot"></div><span>Reliability Solutions — Essential Craft Skills Boot Camp (RMIC Credit Approved), January 2022</span></div>
+        <div class="cert-row"><div class="cert-dot"></div><span>Reliability Solutions — Essential Craft Skills 2: Identifying and Eliminating Common Failures (RMIC Credit Approved), May 2022</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-label" style="color: #ffffff;">Contact</div>
+  <h2>Let's connect</h2>
+  <div class="contact-grid fade-up">
+
+    <!-- Left: info -->
+    <div>
+      <div class="contact-info" style="margin-bottom: 2.5rem;">
+        <div class="contact-row">
+          <div class="contact-icon">&#x1F4DE;</div>
+          <div class="contact-detail"><a href="tel:2157649714">(215) 764-9714</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">&#x2709;</div>
+          <div class="contact-detail"><a href="mailto:Jmayanan@icloud.com">Jmayanan@icloud.com</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">&#x1F4CD;</div>
+          <div class="contact-detail"><span>Secane, PA 19018 (Delaware County)</span></div>
+        </div>
+      </div>
+      <p class="contact-note">Open to Engineering Operation Technician roles in the Philadelphia / Delaware County area, as well as AV production and live event work. I typically respond within 24 hours.</p>
+    </div>
+
+    <!-- Right: form -->
+    <div>
+      <!--
+        SETUP INSTRUCTIONS:
+        1. Go to https://formspree.io and sign up for a free account using Jmayanan@icloud.com
+        2. Create a new form — Formspree will give you a unique form ID (looks like: xpwzabcd)
+        3. Replace YOUR_FORM_ID below with that ID
+        Example: action="https://formspree.io/f/xpwzabcd"
+      -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/maqpvgbo" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Reason for contact</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select one...</option>
+            <option value="Job Opportunity">Job opportunity</option>
+            <option value="Available Services">AV / live event services</option>
+            <option value="General Inquiry">General inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+          <div class="form-status" id="formStatus"></div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div style="margin-bottom: 0.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.55); letter-spacing: 0.12em;">Jesus is Lord</div>
+  &copy; 2026 Jonathan Mayanan &nbsp;·&nbsp; Philadelphia, PA &nbsp;·&nbsp; jonathanmayanan.com
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
+});
+
+// Contact form submission via Formspree
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+const btn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.textContent = '';
+  status.className = 'form-status';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      status.textContent = 'Message sent! I\'ll get back to you within 24 hours.';
+      status.className = 'form-status success';
+      form.reset();
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    status.textContent = 'Something went wrong. Please email me directly at Jmayanan@icloud.com';
+    status.className = 'form-status error';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
