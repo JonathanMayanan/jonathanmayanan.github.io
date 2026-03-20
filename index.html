@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jonathan Mayanan — Engineering Technician & AV Professional</title>
+<title>Jonathan Mayanan — Electrical Engineer & AV Professional</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0f1f3d;
     --slate: #1e3a5f;
-    --gold: #c9973a;
-    --gold-light: #e8b96a;
+    --gold: #2563eb;
+    --gold-light: #5b8def;
     --cream: #f7f4ef;
     --text: #1a1a2e;
     --muted: #6b7280;
@@ -22,7 +22,7 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     background: var(--cream);
     color: var(--text);
     line-height: 1.7;
@@ -74,7 +74,7 @@
     top: -20%; right: -10%;
     width: 600px; height: 600px;
     border-radius: 50%;
-    border: 1px solid rgba(201,151,58,0.12);
+    border: 1px solid rgba(37,99,235,0.12);
   }
   .hero::after {
     content: '';
@@ -82,7 +82,7 @@
     top: 10%; right: 5%;
     width: 300px; height: 300px;
     border-radius: 50%;
-    border: 1px solid rgba(201,151,58,0.08);
+    border: 1px solid rgba(37,99,235,0.08);
   }
   .hero-text { position: relative; z-index: 1; }
   .hero-eyebrow {
@@ -124,7 +124,7 @@
   }
   .btn-primary {
     background: var(--gold);
-    color: var(--navy);
+    color: var(--white);
     padding: 0.85rem 2rem;
     border-radius: 3px;
     text-decoration: none;
@@ -177,7 +177,7 @@
     position: absolute;
     bottom: -16px; right: -16px;
     background: var(--gold);
-    color: var(--navy);
+    color: var(--white);
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.06em;
@@ -194,13 +194,13 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    opacity: 0.55;
-    filter: drop-shadow(0 0 10px rgba(201,151,58,0.2));
+    opacity: 0.85;
+    filter: drop-shadow(0 0 15px rgba(255,240,150,0.4));
     animation: circuit-glow 5s ease-in-out infinite;
   }
   @keyframes circuit-glow {
-    0%, 100% { opacity: 0.45; }
-    50% { opacity: 0.7; }
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
   }
 
   /* CERT STRIP */
@@ -222,7 +222,7 @@
     color: rgba(255,255,255,0.75);
     letter-spacing: 0.04em;
     padding: 0.3rem 0.8rem;
-    border: 1px solid rgba(201,151,58,0.3);
+    border: 1px solid rgba(37,99,235,0.3);
     border-radius: 2px;
   }
 
@@ -230,18 +230,18 @@
   section { padding: 5rem 6rem; }
   section:nth-child(even) { background: var(--white); }
   .section-label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 400;
+    color: #1a1a2e;
+    font-weight: 500;
     margin-bottom: 0.5rem;
     display: flex; align-items: center; gap: 0.6rem;
   }
   .section-label::before {
     content: '';
     display: block; width: 24px; height: 1px;
-    background: var(--gold);
+    background: #1a1a2e;
   }
   h2 {
     font-family: 'DM Serif Display', serif;
@@ -259,7 +259,7 @@
     gap: 5rem;
     align-items: start;
   }
-  .about-text p { color: var(--muted); margin-bottom: 1.2rem; font-size: 1rem; }
+  .about-text p { color: #3a3a4a; margin-bottom: 1.2rem; font-size: 1rem; }
   .stats-col { display: flex; flex-direction: column; gap: 1.5rem; }
   .stat-box {
     border-left: 2px solid var(--gold);
@@ -271,7 +271,7 @@
     color: var(--navy);
     line-height: 1;
   }
-  .stat-desc { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .stat-desc { font-size: 0.85rem; color: #4a4a5a; margin-top: 0.2rem; }
 
   /* SKILLS */
   .skills-grid {
@@ -301,7 +301,7 @@
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 2px;
-    color: var(--muted);
+    color: #3a3a4a;
   }
 
   /* EXPERIENCE */
@@ -335,7 +335,7 @@
   }
   .exp-company {
     font-size: 0.85rem;
-    color: var(--muted);
+    color: #4a4a5a;
     margin-top: 0.3rem;
   }
   .exp-content h3 {
@@ -347,13 +347,13 @@
   }
   .exp-location {
     font-size: 0.8rem;
-    color: var(--muted);
+    color: #4a4a5a;
     margin-bottom: 1rem;
   }
   .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
   .exp-bullets li {
     font-size: 0.9rem;
-    color: var(--muted);
+    color: var(--text);
     padding-left: 1.2rem;
     position: relative;
   }
@@ -399,7 +399,7 @@
     color: var(--white);
     margin-bottom: 0.75rem;
   }
-  .service-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+  .service-card p { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.7; }
 
   /* EDUCATION */
   .edu-block {
@@ -420,12 +420,12 @@
     font-weight: 400;
     margin-bottom: 0.4rem;
   }
-  .edu-school { font-size: 0.88rem; color: var(--muted); }
-  .edu-year { font-size: 0.78rem; color: var(--gold); margin-top: 0.5rem; letter-spacing: 0.06em; }
+  .edu-school { font-size: 0.92rem; color: #1a1a2e; font-weight: 400; }
+  .edu-year { font-size: 0.82rem; color: #2563eb; margin-top: 0.5rem; letter-spacing: 0.06em; font-weight: 500; }
   .cert-list { display: flex; flex-direction: column; gap: 0.75rem; }
   .cert-row {
     display: flex; align-items: flex-start; gap: 0.75rem;
-    font-size: 0.88rem; color: var(--muted);
+    font-size: 0.92rem; color: #1a1a2e;
     padding: 0.75rem;
     background: var(--cream);
     border-radius: 2px;
@@ -451,7 +451,7 @@
   .contact-row { display: flex; align-items: center; gap: 1rem; }
   .contact-icon {
     width: 40px; height: 40px;
-    border: 1px solid rgba(201,151,58,0.4);
+    border: 1px solid rgba(37,99,235,0.4);
     border-radius: 2px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1rem; flex-shrink: 0;
@@ -492,7 +492,7 @@
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 400;
     outline: none;
     transition: border-color 0.2s, background 0.2s;
     width: 100%;
@@ -513,7 +513,7 @@
   }
   .btn-submit {
     background: var(--gold);
-    color: var(--navy);
+    color: var(--white);
     padding: 0.9rem 2.2rem;
     border: none;
     border-radius: 3px;
@@ -580,7 +580,7 @@
     padding: 1.5rem 2rem;
     flex-direction: column;
     gap: 0;
-    border-top: 1px solid rgba(201,151,58,0.2);
+    border-top: 1px solid rgba(37,99,235,0.2);
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -681,6 +681,23 @@
     .form-group textarea,
     .form-group select { font-size: 16px; }
   }
+  /* HERO & NAV GOLD OVERRIDES */
+  .nav-logo { color: #c9973a; }
+  .nav-links a:hover { color: #e8b96a; }
+  .mobile-menu a:hover { color: #c9973a; }
+  .hero-eyebrow { color: #c9973a; }
+  .hero-eyebrow::before { background: #c9973a; }
+  h1 em { color: #c9973a; }
+  .hero-summary { color: rgba(255,255,255,0.7); }
+  .hero .btn-primary { background: #c9973a; color: var(--navy); }
+  .hero .btn-primary:hover { background: #e8b96a; }
+  .hero .btn-outline:hover { border-color: #c9973a; color: #c9973a; }
+  .hero::before { border-color: rgba(201,151,58,0.12); }
+  .hero::after { border-color: rgba(201,151,58,0.08); }
+  .photo-frame::before { border-color: #c9973a; }
+  .photo-badge { background: #c9973a; color: var(--navy); }
+  .cert-strip .cert-item { border-color: rgba(201,151,58,0.3); }
+
   /* SCROLL ANIMATIONS */
   .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -712,86 +729,103 @@
 
 <!-- HERO -->
 <section class="hero" id="home"><div class="hero-text">
-    <div class="hero-eyebrow">Engineering & AV Professional</div>
+    <div class="hero-eyebrow">Electrical Engineer & AV Professional</div>
     <h1>Jonathan<br><em>Mayanan</em></h1>
-    <p class="hero-summary">Results-driven Engineering Technician with 7+ years of hands-on experience in electrical systems, preventive maintenance, and mission-critical operations — plus deep expertise in live AV production and streaming.</p>
+    <p class="hero-summary">Results-driven Electrical Engineer with 7+ years of hands-on experience maintaining, troubleshooting, and repairing mission-critical electrical and mechanical systems in high-uptime facility environments — plus deep expertise in live AV production and streaming.</p>
     <div class="hero-cta">
       <a href="#experience" class="btn-primary">View Experience</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
   </div>
 
-  <!-- Circuit diagram center -->
+  <!-- Thunder bolt center -->
   <div class="hero-circuit-col">
     <svg viewBox="0 0 140 340" xmlns="http://www.w3.org/2000/svg" width="140" height="340">
-      <!-- Top power rail -->
-      <line x1="70" y1="10" x2="70" y2="38" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Node dot -->
-      <circle cx="70" cy="10" r="3.5" fill="#c9973a"/>
+      <defs>
+        <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffe680"/>
+          <stop offset="25%" stop-color="#fff8d6"/>
+          <stop offset="60%" stop-color="#ffe680"/>
+          <stop offset="100%" stop-color="#e8b96a"/>
+        </linearGradient>
+        <filter id="boltGlow">
+          <feGaussianBlur stdDeviation="8" result="blur"/>
+          <feComposite in="blur" in2="blur" operator="over"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <filter id="sparkGlow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
 
-      <!-- Horizontal split -->
-      <line x1="35" y1="38" x2="105" y2="38" stroke="#c9973a" stroke-width="1.5"/>
+      <!-- Background glow -->
+      <ellipse cx="70" cy="170" rx="55" ry="130" fill="rgba(255,246,200,0.1)" filter="url(#boltGlow)">
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0.5;0.9;0.5"/>
+      </ellipse>
 
-      <!-- LEFT BRANCH -->
-      <line x1="35" y1="38" x2="35" y2="62" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Resistor left -->
-      <rect x="25" y="62" width="20" height="36" rx="3" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="35" y1="98" x2="35" y2="130" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Capacitor left -->
-      <line x1="20" y1="130" x2="50" y2="130" stroke="#c9973a" stroke-width="2"/>
-      <line x1="20" y1="138" x2="50" y2="138" stroke="#c9973a" stroke-width="2"/>
-      <line x1="35" y1="138" x2="35" y2="170" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Switch left (open) -->
-      <circle cx="35" cy="175" r="3.5" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="38" y1="175" x2="55" y2="162" stroke="#c9973a" stroke-width="1.5"/>
-      <circle cx="55" cy="175" r="3.5" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="55" y1="175" x2="35" y2="175" stroke="none"/>
-      <line x1="35" y1="179" x2="35" y2="210" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="35" y1="210" x2="70" y2="210" stroke="#c9973a" stroke-width="1.5"/>
+      <!-- Main thunder bolt -->
+      <polygon points="78,10 50,130 72,130 40,210 65,210 22,330 58,220 38,220 68,140 48,140 85,10"
+        fill="url(#boltGrad)" filter="url(#boltGlow)" opacity="1">
+        <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="1;0.85;1;0.9;1"/>
+      </polygon>
 
-      <!-- RIGHT BRANCH -->
-      <line x1="105" y1="38" x2="105" y2="58" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Inductor coils right -->
-      <path d="M97 58 Q97 68 105 68 Q113 68 113 78 Q113 88 105 88 Q97 88 97 98 Q97 108 105 108" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="105" y1="108" x2="105" y2="132" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- Diode right -->
-      <polygon points="95,132 115,132 105,150" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="95" y1="150" x2="115" y2="150" stroke="#c9973a" stroke-width="2"/>
-      <line x1="105" y1="150" x2="105" y2="176" stroke="#c9973a" stroke-width="1.5"/>
-      <!-- NC contact right -->
-      <circle cx="105" cy="181" r="3.5" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="105" y1="184" x2="105" y2="194" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="95" y1="176" x2="115" y2="194" stroke="#c9973a" stroke-width="1.5"/>
-      <circle cx="105" cy="198" r="3.5" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="105" y1="202" x2="105" y2="210" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="105" y1="210" x2="70" y2="210" stroke="#c9973a" stroke-width="1.5"/>
+      <!-- Bolt inner edge highlight -->
+      <polygon points="76,18 54,128 73,128 44,205 66,205 30,318 56,215 40,215 66,138 50,138 82,18"
+        fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
 
-      <!-- Join node -->
-      <circle cx="70" cy="210" r="3.5" fill="#c9973a"/>
-      <line x1="70" y1="210" x2="70" y2="242" stroke="#c9973a" stroke-width="1.5"/>
+      <!-- Hot center line -->
+      <polyline points="80,15 52,130 70,130 42,210 64,210 26,325"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round"/>
 
-      <!-- Motor circle output -->
-      <circle cx="70" cy="265" r="23" fill="none" stroke="#c9973a" stroke-width="1.5"/>
-      <text x="70" y="261" text-anchor="middle" font-size="11" fill="#c9973a" font-family="monospace" font-weight="bold">M</text>
-      <text x="70" y="274" text-anchor="middle" font-size="8" fill="rgba(201,151,58,0.55)" font-family="monospace">3Φ</text>
+      <!-- Secondary bolt (smaller, right side) -->
+      <polygon points="98,95 85,145 94,145 78,200 88,200 72,250 95,195 86,195 98,150 90,150 105,95"
+        fill="url(#boltGrad)" filter="url(#sparkGlow)" opacity="0.7">
+        <animate attributeName="opacity" dur="2.5s" repeatCount="indefinite" values="0.7;0.4;0.75;0.45;0.7"/>
+      </polygon>
 
-      <!-- Ground -->
-      <line x1="70" y1="288" x2="70" y2="302" stroke="#c9973a" stroke-width="1.5"/>
-      <line x1="54" y1="302" x2="86" y2="302" stroke="#c9973a" stroke-width="2"/>
-      <line x1="59" y1="309" x2="81" y2="309" stroke="#c9973a" stroke-width="2"/>
-      <line x1="64" y1="316" x2="76" y2="316" stroke="#c9973a" stroke-width="2"/>
+      <!-- Spark lines -->
+      <line x1="22" y1="175" x2="8" y2="168" stroke="#ffe680" stroke-width="2" opacity="0.8" filter="url(#sparkGlow)">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.8;0.3;0.8"/>
+      </line>
+      <line x1="20" y1="185" x2="5" y2="190" stroke="#ffe680" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" values="0.6;0.15;0.6"/>
+      </line>
+      <line x1="105" y1="120" x2="122" y2="112" stroke="#ffe680" stroke-width="2" opacity="0.8" filter="url(#sparkGlow)">
+        <animate attributeName="opacity" dur="1.8s" repeatCount="indefinite" values="0.8;0.3;0.8"/>
+      </line>
+      <line x1="108" y1="130" x2="125" y2="134" stroke="#ffe680" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" dur="2.2s" repeatCount="indefinite" values="0.6;0.15;0.6"/>
+      </line>
+      <line x1="30" y1="250" x2="15" y2="258" stroke="#ffe680" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      </line>
+      <line x1="75" y1="260" x2="90" y2="265" stroke="#ffe680" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" dur="2.6s" repeatCount="indefinite" values="0.5;0.1;0.5"/>
+      </line>
 
-      <!-- Small node labels -->
-      <text x="25" y="84" text-anchor="end" font-size="7" fill="rgba(201,151,58,0.4)" font-family="monospace">R1</text>
-      <text x="18" y="137" text-anchor="end" font-size="7" fill="rgba(201,151,58,0.4)" font-family="monospace">C1</text>
-      <text x="118" y="84" font-size="7" fill="rgba(201,151,58,0.4)" font-family="monospace">L1</text>
-      <text x="118" y="144" font-size="7" fill="rgba(201,151,58,0.4)" font-family="monospace">D1</text>
+      <!-- Impact sparks at bottom -->
+      <circle cx="22" cy="330" r="4" fill="#ffffff" opacity="0.6" filter="url(#sparkGlow)">
+        <animate attributeName="r" dur="1.5s" repeatCount="indefinite" values="4;8;4"/>
+        <animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" values="0.6;0.2;0.6"/>
+      </circle>
+      <circle cx="22" cy="330" r="10" fill="none" stroke="#ffe680" stroke-width="1" opacity="0.4">
+        <animate attributeName="r" dur="2s" repeatCount="indefinite" values="10;22;10"/>
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4;0;0.4"/>
+      </circle>
     </svg>
   </div>
 
   <div class="hero-photo">
     <div class="photo-frame">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAGQAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAopCwUEkgAd6wtc8eeG/DUDS6rr2naei9TcXSJ+hOaAN6ivLtT/ab+GekiXzfFlnKY13Ytg8u7rwCqkE8dKg0z9qb4YamqbfFVvbu2Mx3UUkZXPrlcD65xU8yXUD1iiuP0z4v+CdYu5La08U6TLPGu5k+1oMD8Tg/hXUWuoWt7EktvcxTxvyjxSBg30IPNO6YFiikpaYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUmcVzXjr4i6D8O9Inv9a1CC2CRl47dpFEsxHRUUnJJ4FfGPxf8A27Nb1eOSx8JQJ4etw4DX0kiyXDAZyBkYHbpk+9JtIaTex9peMfiH4b+H9tFP4h1i10mOXd5f2h8F8DJwOpx/Wvln4w/t3x2dmkHgewkJYsJb/UIh0BwPKQNzkc5PqOK+L/FvxI1PxJc/bNT1K81G9Y5dppSzMSe2ckVx95qs08hffFG+QOMgqfT/AOv9az5my1Due4+K/wBrb4h+JbNbS712URB95hjCoX7AOAOg9D9TXlV14s1bVJpJ5ZC07EKxZiZCenO76fhXLNfSHLDBl9cdecY5/OkkvyI2Vzv5xvB6/T1qbFJJGu+o3XnOMyHBYEIc9qnj1W5dkIR9mMcOFB+h7VzZv/OO0qyKQQfmxilRim1i7un3QGPGf8aLDOqPiS4gby3HI5AYbsnHNbOkfEfXNE1COawvrmIxgELayFQrDuoHH6V560ghck75GftjgirUN4YVjGXJyDlR91cdDilYe+59YeCP25/Hfh55E1G5TXbTcOb+3AkUY/hKY/XPSvevA/7e3hXWLSJNd028sLvaC8loFlhb3GSGB9ua/N+PV5o2wspzj5QefqCRV+31QOIzsfzjhgF7544HQ9KLtbMnlR+y3hTx/wCHfG9nHdaJq9tqEUmQojfDcdflPP6V0Nfjb4b8YajoF9b3+l3s9pcbgyyRSbMMO4YencV9KfCv9t3xP4axD4mVvEtn5Q2LlUmHowkx8wzwQeatT7kOL6H39RXnPwu+PXhL4sWitpd+lvfbirafdsEnz6qufmHuP0r0atE09iAooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUjMFUkkADkk0ABOK+ffjt+1toHw6s7jTtBnh1rXyTETEd0Ns2OrEdT7DjjkiuF/a7/amXw9G3hDwjqH/ExfcmoXtuc+SNuPKU+pzyQeOBnrj4H1bUZJWl3udxJyC20EkZP4VEpdilG5veL/AIgav421K41PU757i4upmeZ5SSx5zxnoOcAA4AArjdQ1gM8iRJ5fOA/Vzzwf/wBVRXV28VqwkfpmMBT2zz+tZrXSxOqhcSrg7yeBxxx+tZo22JgHhhDj53JJOcnHPf61GZy8WHHzZyVTgL6VHeXBXKxgEKOoJ4PfFRSlMCRlPQfKR1OOaoTHfaCIiqqUPLHk4+lMjkJK/vAgA6549xUYmYg+WME8AA8D659aVJJGlzxlcYRP4aAHCZirqAGQneADnB9cUQuxUFQCo/iY8VWAEbCNiCpJGScACnIF3kPhCuDlhxj6UCLmEfIaRw4+7u4yeuKcrys6BZd23kD2Hp9KrIwYKwfaoA79uxNT2/75CXViA2DJF/CO+KRQ9JJYiCxB53bh1apTMzS4x5IHcg8A9qgIdCMHGemDnAFLBJI7bi24EYwRx9M0Aan2kbUzMWmBOGBJxg8Y/wAa0NM1aZpZYknCRs2AWY4GT6fzrBJkjQMF2Mh4YDkZpklwwb7vJP3sc5xgmpDVHo+j+LLjwxqNrdW92be8iYOksTksjfwujDvivtf4FftpW95cW2i+MpwiFAq6w7cbgP8AloOvPr2J9K/OpL12/d52hSeR157k9619M1y4s5xGj7FKsNz8nkfrmkrp6Cavuft3b3EV1DHNDIssUihkdDkMD0INSV+YXwA/al134YajDbzXL3+jSOPOsJ3yu04G5D2YD04PcV+jfgPx5o/xG8OW+taJdC5s5uCDw8bDqjjsR6VtGV9DFpo6KiiirEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACGvjr9rP9qK80S9vfCPhe6FusSeVf3seGdyw5jjP8OB1b3xXsv7UHxjf4O/DeW7tIjLquou1lZkMV8pihzJxydo6D1xX5W+JdZku4zdyTSvcNkZY5PJ5OT396iTtoVFXZR1nW5pZmKyYONxlPJJ+lc/JISMs7O7E/Kwxz7mnOZbhuXDLuPfmtDSNK+1tGHjLAnaSeoFZOSitTeMXJ2RlLFJMUCguOSuB0qx/Z09q4dF355EhB69a9R0zwRHCiFoxyBg+gqbU/DCQIpQbR0bjPHIrkeJV7HdHCu2p49OZreSXzA3PBAJGBnJH0qku9m2qXk7YXt7Z9K9NvPDCvIfLKpjHIHWqKeEIUkckbc/eCng+9aKvEy+qzvocMdPZF5YtIG6N/jSR27+XwQrDggHivQJPDVuYyvlrhhkHPcdKzpPCsgkDK6BemMc59qFXiy3hpdjjhbBRJIzNheo285P1pbaFmlDSN8n3cg4PPbnvXdnw4rqHAXI524zTE8Kjadw3Iw3BUznOaFXiH1WRwiFmiZgSMjkbeSM1etrUspO0/KmS+cD8u9dvF4WhkVGcFGUZOPX+lW7HQIIeNmSW3kn19qh4hIqOEl1ODGlSHH/LPuFUHIrV0zw9duwKxbixA3DgAeoPrmu4XS415RcYHpnj8e1aFtarcyDei7VHyjHTHp6Vk8Q+hssJbc5vT/DEt85jZCib/AJ3YdR6jnrXQ/wDCrobuJ3hjcRoMEsAGI78d66/SoF2fugIwQMtjk49BXYWECrbNHs++vUnj8K5JV59DeNGK0PnTUfAtxFNLtQhF6ZFc/d2UtgMkFsHC4J/KvoDxHbOwk+bcvQ/KAM1wOq+HiqsNo83tj3ropYiXUwqYePQ8/ttQktbhW2DdjP3c/pXtXwM+Pet/CfxANQsClxBLhJradmxIuQW4B6+/avMr/SUVWwwYopC5Hp7ms22mmt5yGwI2/hUflXcpc2qPNnDl0Z+03gnxjpvj3w1Y61pc6T21zGGwjBjG2OUb0IzyK3a/Nr9lD9oq++HWq2+jXQNxo1/OkUkc85RLdmbHmgYOD0B6DFfpGjblB9RXTF3WpytWHUUUVYgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACmSypDE8kjBEQFmZjgADqTT65n4l6kukeAPEN2zhBFYzHLR+YPuEY2jr9KBM/Ov9sD40N8TvH8sWntHJpGlA2lvLE52uSclvrnPI9BXzJqkzTyFFbOAowWyOnNbev3nnyDjLYOF6AHPWuchXzpS3ythvXoPUVi97m0VpY0tN0prmQJnj+LjOa7jQbOOPywYx8h5xWP4as1eBEKFiTlu+Pp612FlbgBWVCmQPlY5ye9eZWnfQ9ahTtqa8LhscZA/QVaMiSMikYAxk46VQjJQA85HHFWoZYxGQ3y8YxnrXAz0kjM1O1SPoTtAzgnpmsZrbIGeMnt2rfu9rFvfgZOaoTQNGcYBAPUHBqkyrGUYx0TG5T3NDs74UBUIPBAq99lBLDBBxuyBmpEsztbcCHHXA4Hc81e4yhEjE8YPy456A1YSHaMBWIPoMYqwmnDBIK8fw5/n+VXPsbkJ5m0cYPY8cZpsasZX2VlxlWYjrnp+dOUhchRhgeq8/r3rUGk+YWbehRfWQDPrj1/DNKLdLdAV3DcuMkYB5qbMWhQjtyynJAORwe9X9Nty0uSSqqefX60AJLnbHh8ZGW/pirsCSR9cDP8ADjH1qWBvabEsZjBwOMMQOM1vxTqqupbdzwc5P1rlodwTGcAc5bqauLITgkklevGM/wCf6Vi0Jon1eBrhlJTIB49/f/PpXNTWLh2L5Yt93nj866FbneA7k44zn3qvcWu9gMYA7CqTsJq6OJ1HTLc20gm6KjAAjCnPTP8AjXD3FvsJmU+ZITz5ydsc+3WvUb2wBkdmyVQEnPpXB+IbLyEZ4lPl9Axx8xPUAfWu6jU1sebXp9Sjp94VnWeAeXNActHnqPxr9YP2bvHX/Cwfg74e1JwVuY4fss6s24h0+XJ+owefWvyQ0+RYlDTDywflJGDkc8Gvtb/gn94jeDX9a0nznWG4hV/J+9llJAOO3B68Dp6ivUg9TyKi6n3PRRRXQZBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfNv7dHjiXwz8LbXTLV5YrrVLtQZUbaFiQZcE++QMdxmvpKviv/AIKHarE6+GtPiuIxcIkryxBsvtbG3IxgD5Wwc8nIo6AfB9/MJ1mkcStI7lVy2dvPYdhzWXbENKy7MKODgev/AOqrd6zQeaGbd5jAgEYIAPf0qtZ2xnIAYkE9fWud7HTFXZ3nhNSqpEqBhu6gZxnvmuxaFc5Hp1Iwa4Dw60sMkakE543ZrubeRdqgHPHU141X4j3KC0J8bYgM/wD1qiUA8Hnknn1pkkoBK7889F44qMSIDvO3jvkGsEjrNHZH8pADOB0OOKi8kiQMIzwOMfSo1uNjFCVIPfOeasx3SFdjBAg/ibj/AD0osWR20aSYVsFhwEboDxUr2sZJHUnnb17/AJDn1qxFbrIxxliBv2jnjrV2CIu0gB3sAS0Y6j3IrRXJZkBfLVUCszsfmDLn39P8MVYt7a5hBZgIlz8r7ckH/JrQtLRWmYudiJnc5TfjjGAByTzVuG2S2hWS2UyysMlXUqAeCBjj+XWtUuYhtRMlNLafDuGweM7SM/SpY9NiUIAzEq2SrLj8eev5VvQWxZXdzJHIT+7UEEnjkDnHGMYxUksHyJuC/wC0JGGQuM7u3ftzRKARqXMBrDy4zkPtPU7Rg98CoPLEYPIyDyM/lWncR7HzITMo5X+Hp9BWdMyJnJIjGM+4HNYNWNE77EaTlJgDkqDj5h1qwJynIClRyBjp+IqjujZmK5CEgAE9aFkIHDM/OB061DQGlFdKWCgZUjt3qzvM8m4DavQ+g9Ky1OEIdCgJ6EdasmQlgFPzDjPrUgWLi0jS3ZSA+7kk9/SvOPFsbxCQAZGOM8YPqK7m6upB2AAPQdBXN+IoI7gqz4YrgjcM8CtKbtI5qsbxPNYZWj3oFCt1Uj17Dmvaf2WPFK6B8YvDEtw7W9q1yiTSMxCjORz7dK8X1RfKvDhjgnOemAPT1roPAt4ln4jtrqbMkazozIWIyAQSAeoz617UXpc8GorXR+0CkMoIOQe9LWZ4ZmmufDumzTlGmkto3YxAheVB4zz+daddpyBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFfn3+3/AKyb34j6VZxW8Ya1tMed0LbjnDeoBGR9Tiv0DNfnV+3q9z/wtWMzQNDb/ZFhhLdHGAdx7bckjH+z70nswW6PjvV7iU3hSM4BOdrVr6JYuYuAS4zjFYd20c1yGI5znK8816H4VsmniUkB9vU49q5ajsrHdSV2NtImjUfKd4xz0xXQ2zP5BQ8DpxxWVdt5UhREPHVjVyymJwFj2+gJ/nXkz3Papl+Nflzw3rkD8qnQIVG0ADrgjNQ/MQT5e09uOM+9SQYaPaQobqeeh9/esjqSJgmAONoHGV7fnTwvyKBl+CCp6Gmx8MSTyO2c81OjSbdgAYH26VFy0i3GsSkgqT05xjnsfwrSjsYpuXjZQGYHHUHHXPU8ism3XYzAqeFyQVwD2Ga07dgoCkEITt2kZGe/6jmtFoS0mWdHiZJHzhgqFEJJy2T1z9K6CZfOSIJuAQeUkS5YknsF/UdTiuZVRJMZHjaQAkvtJX5u3Tp/niugguGDkQyKGxhcqFKg9eeMH6e3St4ysjCULsrG28sK2BAc/KhUqG9cDnJpHumVeu9M7hnlv17fSrsaToqCSNhvBw8nJf6E85/AdKxdW1OC3dYItskrnaMZOD6Y+vf+dTKRUY20EnulaAYZUflef4cEZJ9eKxZpDcESAl1PG/HX3q4lm8Kgs7vLjJzyq88Yz05pTauAQdpA/unINYtmqTvYzduAWKDnvk880hYFwzDnGBVw2pVOScdCaryRAFtvQ5AqU0NofJMSuMYwfQVBIx5yGPbGcUqQFVGQCME4H86gkiKHIYgemR/nNJiENxu4Y+34/Wq81oLreCN2Bx61HIPLZTzn8s1bsWKurYyCMgHoaaMZbHnXjGx+xlDjDjuD+lUvC1+ltcxOJCzqwPXkHg12Xj6ySa1MmMZGc1xfhpz9q2hgBjawKjkH/PWvWovmieJXVpXP2P8AhTr3/CTfDnw9qRMZa4s42byvug4wcflXWV598AdPm034P+FYbhmaT7EjfO5YgEZA59u3btXoNeitjzQooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABX59/8ABRIi68eaKFGx4rEqw3qdy7uDgHI5OOcdK/QSvk79vnwO2r+D9O1qKGH/AEWUxzSYIcKw4zjhlyB16UnswPzYKiK4XHZiMYyRzgV654Qt0i0ySRVBZl2hgOnHWvK72ApeFcE/NwCeR717N4Vs1/s1FwSoUFmYdiP0rkqHfROZuIGe4ZcHvgY7ZrT0+yZVByfcGpryKGCaRsrsj4G4c8d6yZvEKgvHazESgjlQCM/Q8V5c4tuyPYpzUVqdSkSygA4GBjPWpTaoyYTlgeleff27qdvMJhKbhM4Yk5B9OByK2rXxczkbnEi98E5WodKS1No4iDdmdKY1VC+doHHPNWYLf5ypUFe+T+tYcXiO3SIPI2wHA+bgHPetKx8QW07RBZTkEqCp+XP+c1k4tbo6FOL2ZvWOmLPKGUZK9EA6+3FWZdNkbkIFZh8qDkEc81Vh1KBmUiRSR97nknGAT/L0rUi1yFiFMiOpDHIIwemOnP1rSK7kSeugyCwI2CRwDxsULn9D+dbMFhJHhZU3s5wuwYH1yMZOSOM0tnqEIAflXQHLDknIwT9enH+FatpfW85mYwxqVKDC5BceufTA9s1tGK3MZTa2Rn3OmBI2DbpJBkFQSFHpketZFnoFuly9w8e5icktyV9h15711uq6nCFO+NWj27hvzliM98dOlc7FrQFxkPibeGUrnIHp9aHFbApN6hLYm0hmI2nncwZcAemfwP6isi/IhQnack8ADHOefoKW78Swz/I5CqWO/ecg+nHr0H51zmqeLLSEkGUKQ2Ouf51lOPY1jK2rLrgKpJywzzTVVHAPBJPfk1zlz4sjlkPlMMnuVzzWdd+JzGnytlgT/qnBU/h1zWSpSZTqwXU7GXYIyTjGcHHBqmxWRwFbYR13dq4qTUby7dkLGMBsOA3J9uP50tjq9zYkgkSwk5OAeB+NaOk0jD26b2OtuId3QHHfim21s2cAbue9VtL16Fj5cnzKeCBzz610cNvFMd0LAsMMDnrWdmnZkykpLQ5PxxGv9hSs/BQ4zntXnvhiF5bsbFZQZBhiCSK9U8cWzt4dvpFXeVj3AZ7g1zXwc8Ovr3iPStNublNPtbq5jjeaZwihSeWJbAx16nHFerh9mePidz9bvAVtNZ+CdBhucC4SxhEgVQoDbBkADoK3qpaLDb22kWUFpKJ7WKFI4pAwbcqgAHI69Ku16SPNCiiimAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAIzBQSTgDkk14b8Y/iN8PfHPg/VPD3/CZaNFczr5QkmkDRZyMjfgqDx17V6r490u51zwR4g06zZlu7vT7iCEocHe0bAYP1NfkvqC/YFaMFkgJCvGWxtYenpzxXPVqum1bqdVCh7ZS12Mv4l+DT4U8WXFmkxv7bf+4uUChZhgfOuD909j3HNeoeHoI4o5bdzjbGMpnB6DivJGs5NT1nT7RV2rJcKoUfw85P5Yr0qK7FnfTb5GyytgccnoKxnK9ma0o20OW8TxXTFzyqM5H3sjGcgCsDStOiubotgO/J2k4Vj2ye1dk13BfWclrMygOM7s9DnH4dq4m/hGnXTIHAQnOM81xy11R6MEr2kbQ0oyZEgAOSSKsT+Em+zSTIDvx8yyZ29sMO5B/xqlpuvJEB5rqV9GNdFp3iWwZ1El1EnbJboOlYKo09TtdKLWhw1zpd1bgRgM0eTuh5IA9cjnAz/k5rOd5ra/kVmZExmPPY85A9c47+vtXttte+GbqBftF3BKydWLhee3uce/pWJrmgeH9RXdFMJSFGSrDH0zjrzXWpKS3OCUHBnDQ6zK4SUPmXlcEbWz2yPpj610VhrErbicIApGNvB9c+ma57UtBGnygQyCYA8MOvHqKhtJZoZCoI2jgjbypz1rCSTR1wbT1PTNN1UKiyYbGAQTgD6/piuii8QrEZm85gvO7AHcdx2HX6V5TZ6gY8bDjB9MitiO6nuI8YILHHGR6cVkr7HVeO528+uGeNJC53MdzKMsCeorndU8Q/ZJC0cmeoC4z+f5daybuSeNAAi7uc8kEe36VhX108pBXKkdj3FCTvqJuNrok1bWVuAu3eMnLDtmuT1OWeWUkNgZ3KoJb/AD/kVpSBpG+ZlH14q5pkdhaur3OJGxnB6Lx39a3i7HHNOSMSy07ULxvljKBxtUKMtjHUkcY/OtzTPBV/IuZxLHGoBaNWyX98Y7e1dHpniLToGVYYHlcnnyoyc+orQ1i+1CePzYtEvVSUfK8qBQw9RzzWsqlloYRopvU5d9LS1TaPMSM8Bdxx6Zz6/So3kCxBRtXn+IZpNU1DULd/3+nzJ6bcNgfgawJ9aDE7opIz33Ka5k5SOpqEdDYlvOQuVcLwNvB/LtXU+HtXNu6KZN6cAKvPHsTXntrdCdspySfXrXS6QJCFyAufSlJWIsnsemTW8es6HqMBG4yQvgep2/415T4SkFuzTKSksa4Vx/Cen869S8MSr9pRZTw3Y9+OlcPd+GJk1660u0GD9rZVXbnAPIz+BrajK6aOSrD3kfcf7CNlq0fgrXbu5u5LjSZrtFtA77h5iqfNZfQcqD7ivp+vmT9hC6uYfh/rmkTOrx2V+JI9o4AkTkfmmfxr6br1KNuRWPLr3VSVwooorYwCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCC9R5LSZIjiRkYKffBxX5B61oVxLql7HNPnyXPmKBwD3H4HI/Cv2CPSvzS+N3hFvAfxO8ZWSJ/o9xcvIFxxiVhLHj6hyP+AGuTEq8L9j0MDJKo0+qPMfAtg8/iS3mKFkt42mLOM8gbcn86ueJ7gLdyFQOvKocDOOla3geznubLV76QlfKVYQCmTyc4HpwOvvXOanE1xeBWzhmJIHTr1ya4aknyo7acf3jOcukl271JU5zwa5jUneWVmmkce4r1GTw99pjwGGCepFZt/4WtDGfMkYuOoCjBrkhU5dz0J0uY87tJ7EXCL5Mt3JnARAWJPauz1xNe8G6FDqcnh+G3tHdVT7SnJYjIHT0q5of+gSQrbCFDC+QdgG4Z6OB1+vavUdR8XaB4x8KS+HvElpewQSKMT2y+aiMPuuh6gg9iK2VSm5LmRjKlVUW4PU8U/4WjrF14fNxNB4cliSdIRZmNRcHKliwUAMVGMFs4yR61rWNk2qeF4tcfRbjTrKYsou7T5ogytg5x0GfWodL+Blhe6xMv8Ab9xLYRo8iGLTZTLKVI/dgH5QxB6k4r3f/hJI9E8GW3h7SfDrWlgkPlqdWuEizzySgzkk5zXRUdNJchyUlWcnz/ieGfYJrpI/JlEgZdodSSH/AA7GsqWKayuWWWMoVPOa7+Twvcz6+0+nW+l6LGjmR4IbiSeNcchSuOpx146+1UvHmo297MGXc9wyqXZsHBxyPw6ZrOSsrnXF3fKY+nxpJtAPOQevAr0PQNMikjV2UfPxtKc9Ome1ec6LGzMpA4z3rv8AQbu4MYUwEMOVXcCCB361yuVmdahzKwzxDpUAjJTAIOGxjA9P8+9cJq64YjoeTtHQV6FqxFxFwvzc5yORz29q4XUoW+0E5yR3NSp3ZbhZGbo3hm61OSRwpEKDLMOp9hT5rBEu0slia4uJSES2VctuJ4//AFmur0e5SXTzAVKszAF04IXI3fpmrGhae/hiSeWy1G9sUcGN54445C6kcgsQOxHJ564NdUbNXOKa96xy/wAUPB/in4daFpt7LLDapeO6SLbLuaEjkAseOfauA1zxc921mbLW9ckcW6famvpVOJ+d/lhc/J0xnB9q+g9T1JvEHh6TTdR8WWep2rKD9m1Kw+Y8kEb05UjA5964i38FaBomvm+tV0q4SNw8UEjSyxxntwSN3TPzdzWsakIx99HJOjVnNOEtC/N8JvEKeFLHU7bxBDJ51uJZVuoym0HJ5J6HHavPpLfXbmQxvDDPDwPPUHH6gGvVdb8VXGtR+VqWpi5txhhbwgRxg/7o6/iTWZb3qzuxjjO3szDrXE6ybuoo9D2FkryZxth4fuGYM5U47LXWWOmFVXIC4xnityCBXjG6Mbj6CrMcSBCuMGsZVOY2UFEl0wG3lUNnkfX9Ks6xq40fV4JzDHLbXMY3sy4bK8EjuDjFQ2q7WXcTlTwwGTWj4ot4X0rTLsjcY7sId3GcjkY/CtqPvNo4aukkfXX7G2hppvw51C8WQTfbL8kSj+JVRcH/AMeP6177Xin7IgRPhBGiH7moXQbnod4I/TFe1179L+GjwK2tSV+4UUUVqYhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAV8k/tp+FLe11zw54jC4W5K2dzt4DeWxZCfwkcfhX1tXhX7ZOgSat8G7i+hTfJpd3FdHA52HMbflvB/Cs6keaDRrSlyVIy8z5C0iFIPA+p3ESjZPeyfN0ACqFB9+vevPS6PdAKAwHDM3Jz35Feg20TQ/DSzlbdmV5pHbPHykcc/lmvNTdhJAM7CcED0+teRXXuo9uhrJs3oXSJSCuTj0pLm1FxHkKC31/Sq9lL5nOT9G/XFaaPGI8ivKk7M9qEbrU43UNK8m4MsaMvqQOKWHU57Vhtkb04Ga7xLZZIcrjHXr2psOmCQg+UpYfezxjHTNaRlfcOS2xysGu65eOkNhJcBiwA8pdpz0HI+tbmkeFLyZvN1e6mXcdojDHfnnqTyfoMda6KwsI4GZ3O4ABfu5ODgjHp/8ArqzEV2Ih+V8ZBJ4YdCB79a6IyUVoc8oOT12MHU90FotvBGsUAXI2ZG7t+X88D0rh7rTHkkLOMeoPau78RSrGmBhgB16c/wCRXKPJuG5m5qHJvVmihGK0INLtUilG7JJNdbZsibTyGAxu965qwhaScHgc9R6V00cqQKyMockgrWcmbU1csXKiVNxBAbnPXJrlL+w82bJB98V2Xyyw88gDOM1z97GY3LZ4zxkVEWaTSZn2lltPJ245Aziuq0y1SVQBGr5x5gGeR0Ht61zO8/KQMY71u6FdhmCt988AdxWyk0c0oxaE17w6l6rfuo2dQdsyrtkxn1B5wfWuUn8P3kDN5kr/ADHPzRZ59OK9W+zi5QuU5UY2L1HPI4+uefSqV5ZKX8zaE67sdR7D86uU77mcadtjze30Wd3GXQHOOIzxW7Z6UlsAWyzr3Pet1dPR8Z5I4UDtnsff/CoblEUbgQ59ulc8n2OiMO5WKmOMNzn0FVS5LZDfN7Yp898qgjJPXGBWdJKFYYJGDxWcbjmlY1re4AdDjIPUCul1QCfwZPIo3LHLG53Hp1Bwa4eG7VCA2OeRXoPh9of+ETme45tmuI4yD2BPP8ya7KOjbPKr9D6c/Ynlmf4Z6kjkmJdSfYT3JRC1fQ1eXfs3eFW8J/CrT7eRdslxNNcnjqGchD+Kqp/GvUa9+irU0mfOVHzTbCiiitjMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACs7xDoVp4m0K/0m+jEtnewPbyqR1VgQf51o0UAfnXrugDSvC2p6VIxlk0jUZrRpMYDKvyk47ZYE14DczZuWIQDBzjJ4r7s/aJ+F8mj6hq+t2nzabrG2WaMf8srheWP0ZQT9Qa+DdZJ0/WJom/hfbzXmYmFtj2cHO71NexuCjfK+Q3Jrbtb5XGCyHjGOnSuVgn6gjJzkFfWtWK68mSIoWB6kA85rxpRPoYPQ7TT7tHhYMoYMCNx78f8A660LaRdiMdxZuOD8pGec/Qj+VcnptyWk2jdtkPzAPj/630rf0+6BcSbljMRyTnaVx8oHp0/lmnGPQcmbIaRg5wDyCwJ+6D0z+GPzqJ3/AHDKThsnCjngH1/z0qrHcjZw22HeFXfyMD+mF49z7VpROXkLsSg3EEHofUH16delbxiYylY4fxdeCzQPKMFug6fT61i2SyzrvYbRgDdjvW/4kt4tR1qKOaUcKJCvZck4GT+dOOlw2MLSBs7PXmpnaLsEeaevQjgiMTBVYsy4XLf3fapDKWDYUbRx7j8aks2tcKWPmPk4JOO1d14U+G1/4thuLy1tjLHEvCg4LEAscDHOBgke49a51GVSXLE6k1TjzSdkcuq+VbhY0wWxkMc8VTuV3yYIyx6gjtXQanoVxoV7JHdQvBNEWVlkGChHUEflWA91BbPkZMjHJzxyf8ikk07MbtLVbGDqtrLbElVPHzBT1FW/Dd2l2eSFlA4U1tzCOaNi6htoxjPNYtnYRrqpigAPBkBPYCt4NP3Wc00469Ds4bggKMqy9CMHdjHTP4nrTbiYyc4G0HeuDk9zn/PpWaLnySq8licgqpb5vQ//AF6Wa7wkmZA0igMiyELyO+Pr/KnKIRkh91MtuZFQ4jGCpbjIx3H1rKv5yIeSC4IXLHqf/wBVNvL5HdurMeBg/h9R6/lWVNcKUYyuqAZILAhenbrn8qysa8xXmmmlu9wI8rGSe+arzuYhh2+bHU8YqF7l1yIyFLe3P4DtVK9vw7s2ckdqtLoZSkW3vQxTDZPTjnNesQ6bPf8Agvw3pdqryXmqXqrGiA72OSqjj3P6V4poMMmt+IbW3jICO3LY5Ffpx8Cvhpo+k+FtG1mXTon1YQbYbiRctFGTxtB4UnqSOTnrXo0KPMeHiq9noenaJYf2Vo9jZZB+zQRw5H+yoH9KvUUV7B4gUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB5v8AH7SpNQ+Hd3cRFt9hIt2VXnKjhuP91jX5k/FnSxY+JJ5ohmGR9wI+nWv1h8dWH9p+DdbtAMmaymQDOMnYa/Mf4kxpf2cp3JI8ZC5HUY/zisKyUonVh5OMjyuC9+dQc7c5ODWolxtZCCWI5A4IrAjYCQhiQQatRyHkglu2M4rxpw1PooVNDqNOvFTGWPPUdv8APNacOrL5bKd0qE/OFYoQOnB4wea4uO7TJLj5TwQOpq1aXgScMHAY8gH5qzUDb2mh3ulam8skn71shgQ7HcwAGMZ79cfhXRpqMcMRVXHmF9xJ4xz/AJ/KuC0+9ERSYqquBgsh7fT16VcguWaQZOMngetUnyi+Iy/Gt4+n6yb5FZrSVFUsBwGHr6ZrNPjxDaPC0Mrp3YDI/AV0l7HHdKVmYSA8YPpXNan4csIzvXCs38AOM/SqvCT95EtVIr3XoN03xRbG4JWfaf7rDDfka7m08f3lraIIdQdUXO1Vcrj3rxrXnuIk2JFb+QVzub5mXtkfkMg07w8GluYYHS6lLHMgiY/IvfvjAqnQUtU7ELFyg+Vq567rHxEub+FnupfMkx989f8APFcReeNi04my82Mk+WpOKzvEWlRpdOttFcTW8S7pN7tzzzgHrWPYahNFE4dFWNELpFzl1zxgf09BSjRitXqKeKlL3Vodf/wsFp1VVjZeOBgHNdD4NmuWuri/u0kiJXZGp4OM8nH5VieGoI5HSWaBICyhkjPHXv8A59a6qK8j3bAwytRLli/dRtDmmvekbMt6r72BK5z8vasXVL6SIqwwFXnO0ZPb9efyp0s/yqVOMnsay75hNGVc47BvSkpX3KemxTl1dwSiKWB4+Q8g+nFVpL07F3btvTpxn0qheuyfNluMDcvAx9Kzrid9nzSbhjjggflRy32J5y5Pf7WJVgOvT/Gs6e63sWJAIPp3/CopJOMk5XNV2b58HjJA57CtYQOepUPVfg7pqy6xBIcebJII497Y5Yhc5/Gv1Z0XTo9I0izsokCR28SxKoOcYGOtfmd+zhph134i+GLKPy/JW8RnV26gc/0/lX6eqNqgDoOK9WirI+fru8haKKK6TmCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIbuNZbaVHXcjKQR6jFflH8WkfSvF2uWaXAuI47qVfNGcZ3E4556N+lfqzqMvkWUr5A2rnld36ZFfln+1DG2j/E/WYvIe2inYSxwzDEiRsMoCMnsM1nUV4mtJ2meNXE5SXoM+3SkSbgeo4JqNpA6AnknvSrFzjp3ya8ySR7UHoWRKCSQccZGTVm3J46jHVTWcoO7jv2qdJmimChOoxknNZtGvNbc6ezuNkQO4McnjOB+NTy+Ibe3RmkmVZBn5V5Y+nFcZdajLcEoD5cIX5vlzkdD+HXmqFvcPqEqLbqyeXkKVGC31P51ao3V2ZvEuLtE6u/8WC6jRB8qsdpbHU9/pxWPJrF1dbMKzJyrgLkr7fj/SrmnaXFYyI94RIy8CND/OuitLyzsSxiiVYycqp5qLRTtFGi9pPWTMS18L6hrTwvHEWgfGGf5sjsD+Q5rRXwLq+lzm6EEgVWy6xjC5zkcjpjsK3bPxbBpav5EYUMeRnsf8mnR/ESeO9EkUjwrkHgkjP09KH5M1hGOl0VtI0DV/EEwYWvlCPIDqucg9d2evOaZffDxZHnUyqTt+VAoPPU45zWh4g+Jup6pbxxvcMqqOAnyfyxWRbeMJlj2yBZPQsOfzqFHqayttZFK78J6kjxxQn90QC5jfJXqBj3NZ2s6rqFjqcqq7oyDbg/xY9c+1a914raQcAI3cisw+JUnlP2lFmU8ZPXH1ql56mEoq2jsySx8VlZRFdOEO/CktkEEdK2Z9WjkmMPKOMZSQbSP8+tcbf2STRg2kgkUHd5T9j7VGuo+ZcxMGYzRkRuW6kDpnHX2q3TjLVGKqzg7SOovACDj6YB61jXbFBhSSenPYVas7rzF7mMAYJHX/Iqvd7VZdxAPbNZJWZtz8yuiiysyktnP06022gZ5kAw3PU8U55N7ZzjB65qxYSKlwCQOCMj1rWO5jPU+k/2RdIS4+LGksxDrbq043I2EdRxjH1PXiv0bFfE3/BP+3ln1jxHduoCiJIlYrxjJJAOOuSueR2r7ar06StE8Sq7zYUUUVsYhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFZ2u+ItM8M2El7ql7DY2yDJkmfH5DqT7CmlfRATapYjUrCa2LmMSLjcO1fm7+2r4Ug8I+J7JJ9SF7ftA7PI8g3tGCPLLrj5WIzzyT1Ne/fE39rq6uZXsvCEJtYs7ftsygyyf7qnIUe5yfpXxH8bPFE3irWf9NnkvL4KzzXEr7mdicscnnj0rpnhakKfPNWGtHc87g1Fd7AYdF9RxnvWlbzCUZGPoT0rmB95mkcA/ey/rVq11Fi+MLnjODkV4s6fY9SlVstTc8weYAeCT1NVtSaOLa56E7d2eR/nn86iiu1mbBbnGSM8inXCGeMrjemOmeRWcVZ6m0nzIqtcvKoEeArYXKj7w7DnpyT+dbtlBJpEJ22ksijBLhTWNpok+0AScBCMAjke1dNFfPDhXcvGeME5xVVH0Iox6le0gvtQusQ2sxLdARjr7mum03wVfXKZmkjt4VzufBck9lUD7x79eO9TaTcWzr8mEYc8Guo03WERUUvtHK5Pb/AdK53K2yPRpwV/eZy9t4DuLnh5wrdMBCefzrQtfhhO4IN0Qw5AWPP5+ldxp11aGIsW2ndgbT2x1/E1sQpGA+xw2WUKc9eM/pmo55noRjQtqjzab4YsHw877Qdo5Ayfoahf4eRoA373aRkgsAT716XcK8ol82ZCwcjOfb+vNZl/JpdghmjnaZhnIHr/AIUueZTVH7MTg5fA1rJAQYDFj5RJGWySfUEn9Pyrn9S8DQIHaK5nQjICEBq7m68SJNGBHGDjnOOa53UfEMcPy+YGdjkgdqtTkjz6tODehx9voEltJI8lxIgXkAoOT71k3lvPbzO4QhmOSoXGD2OR+PFdBc6g1xK5yUHc9az7ySJwqyMx3dcHbgetaxk3ujhnBW0ZFoVzKxX94r9QFwc4z3rQviwIy2QBllIqOyMSIoQl0Udh2+tVL+9VXLsfk/vD261L1Y4vlWo2WVYI/mIUHnmovtWZF2AP2BJ446msO+1ETbVcl1Vs4FS2TSzuvl8YGRn0zXTTpX3OOrWeyP0j/YO1XSW8LGwivlOoRKZHty2xtztyNp5fAA+YceoHFfWwr8uPh0Ro3hmzvIJJEvhLlp1chyccc9sYr6J+HX7Ver6I0Vpryf2tZDC+axxOg/3v4vx/OvoVl9V01KOvkecz6/orkvC/xT8N+LreOWy1GNC/SOc7Gz6c8Z/GusBBHB61wShKDtJWELRRRUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRSZoAWiub8Q/EPQPDJZLzUIzcL/wAu0J3yfiB0/HFeM+Nv2qEtd8GiwRJJ0EsrByPwHA/Wumlhqtb4IgfQtxdQ2kLSzypDEoy0kjBVH1JrzzxH8evC2heakN1/aM0fX7P/AKsfVzx+Wa+QfFnxQ17xjdFtS1uWVc5EYxsUey9BXmni/wAZTPGbK0kYR/xyFss59zXr08sS1qv7hn074z/a3cs6WtytmnQR2oBY/VzyPwAr558d/FfU/GlyHnupHjB+UNIWx+J715TJO7MWZtx+vSnRak0akH5l+telTo06XwxA6iPUfIhkld8EA5PeuM+xtqVvq1/PIFJAhiG3JOfvHP4AfnU99qLTQEAkL6ClspgmiImOrszE96daCqR5WJI8pv7CWznaOVjhRv2444qt5qDc4JJUZA9SPWuw8SWnno0ik7h71w15E0TNHIeSflOeD718picO6MvI1UrFi2u2inLISzY7c+w4rbOpbEBb5RycE4IrmBcbCMYLBQwIHI9qkNyCq7gxG0Drk/WvPlC5rGo0dTDeZkQSMBkgggfeP/661BcJIoUnI9RXFLqOXVzIoIX5sck46EZ/Kr+n6kzsEkyN2CWIGf8APSsZUzphWOrWWW3y0LknsRVuPxTJBgTDcgI61lWb+YocNxjBxyKuxwLMFDJuHXmuZpdTuTfQ1YPH1pCW+ZkAGRg5/GppPi5BbJ+4kZsnGVU8GqEGjRvwLdRu+XBUEEVt2nw8Se2a3Gwu3RRghcjr6cfXuKSUGzVzqxWhjH4oX11ueKGdwe4H9e/eqb/EGe73YtJQ33SD1/KvRdN8B2emWzW0aROuwO7SttZyDkn2x1qhq+gWNu+5AA7DDHaDj06daHyLZApVpLWRxJ8QX11HsKMgPPA2jFV9pk3GVuV/gUZP41uXNrHC5CHkcY7/AJ1l3UO5sLkk9M/1pKSexMk1uyrNdsISEO0KcHj2/wDrVialqW6WMgH5cNk9GGPT86s35LxYUtu3YLHsc8DHrntWfEsMl0RcBtrAASMCNnc5HoRn6cV0wh1PPqVOhPY37NKVVhgjKgEgAf5FVdRv/NjZXdQG9RwKoNJGqBoo22Eko56kds1UYvO+TznGRWygmzndR2sW4jvKFvT1xg10/hixea7ZCQETqjHoa5yFTBEoQEyN8kaMN3J/pXonhzTF0ixjjYBpjgux5NevgaHtp83RHPK63PUNEuJP7B8hSA8aeYAD6HP8qV9R+QkNn3rI0C83XDRk4R4yuD24qob4IHVm+dTj619bDRWJZ2vhvx1d6BdgJKTCeGTPFe6+C/jtqempGbTVGWMjmC4O5Ppz0r5Rjumck7RitW11IRKAJChHvRKnCorSVwP0H8LftB2d8iLqtoYSePPtvmU/8B/wNeoaP4g07X4BNYXcVymMkIfmX6jqK/LmDxrqmkkPDcMF64ByK7Lwt+0LqWj3MbS5DKf9ZGxRx9CK8mtl1OWtN2FY/SWivmf4eftb2F+I4NVlWXoN7kJIPx6H9K988OeM9H8VW6yadexzkjPl5Acfh/hXiVcPUo/EtO4WNyiiiuYQUUUUAFFFFABRRRQAUUVna34h03w3ZNd6pfQWFsv/AC0nkCg/T1PsKN9EBo1HNPHbxPLLIscaDLO5AAHuT0r5t+JP7Z2k6H5tr4aszqE4yPtd3lIgfVU6t+OK+Y/H/wAdPEnxAd/7V1aeWE9LZG2RL9EGB+dejSwNWprLRDPuDxh+0d4N8LM8EWpQ6neLx5ds4KA+79PyzXhfjX9ozUvEwkjTVU06xJx5FmxTcPdvvH8wK+R7nUDK5Ks3B9aqNqMiAqXLDuM17NHBUqWrV35hoen+MPibK0bWuns3zHLy9NxrzqfXb2ZyWlcZ680yDUICuJFyT60k0kEn3G59K9GyEOi126LeWrEDPOKiubmKc/vCR3xTJI2gjaTaAMfSsj7SkrnBL57IN369KWwy7LNGqEAZNRpbFkBPAqvGs2792oB9XOf0FRXBUEhpGncdSxwv4KOKQhbh1wyq4PYkc09Zj9gjQfd5wKijjMxCk7VPXHGBTWcDCgEckADpUyGiGWMSjBHX1rA1rQ4p4mKIPN/hbr+FdG6YPsaiZQSc1nOnGouWSBnmF5YTxSHejR7RnAHBx3+lQRknHzEApjB53egr0i8sI7iMxuOn3W7iuW1Tw75Z3KCPUDofp/hXzWKwkqHvR1j+RolzadTF8xjiNudo644Uf54q5AS4SGIb5M7wTtG0HJYk+vHc9OO9VSZrbzPmZRtK477Dwc/hRFM2VAROSF8wHkdO1ebug1R1djcsFjRDgbgGbaSo9Aa6OxuUC7pBvG7aWVu/vXJT6gj6fbIBhEUySRg/eYnhj+GB+Aq60zqkkJIEiMGUh/lJwGPT64rknTvsd1Kvy7nZR6vAGxncAOgJGD609fFcyACOTywgyCuSTxwMd+n0ri4b5J5IomlLbmIdywAIweQe3ar9mLq5ZrYRPNs3KVQDJwe341h7Jo7FiE0dMfF0i+UqyfKAMN0wT3/nT4/Ef2hGeUs4A5z1B9q4a+uo7TZ85kRs4BQK3Bxg8npzVm11+OIKSAzO25O6Ac5U/wAunrTlRsTHE3Z0V9fRTrtUqu5mXAOGyBxz+FYrS4tZC8gDhggUsdwznII+oNczNqG9JgCSpb5ZSecZxkVPf62HaMxFoS8QM2/5mcjKk9O/X6nitoUuU5amIcmT3ySRPdl0AkCRNIcggK2Bkfjt5rP1N0tkjk8+WWV2ZXBHGAFOfoSTj6Ua3cFLiOEY3CGMPgYDHaD36gDB9KpXMzXkKgKqKhARclumc/l/WuhKyORvmYB5J5M5YSMeiY2qOwA7VtWGkLFH50ijHU5pNHsVyrjJbpwOK6VLZQqiRdwU5Cnpn1rpoYWrinaOke5ouWnrLcg0jRkjlF5NGFcf6tCenv8AWuhhBJJzyetVIQW5OeO3pVnfg5Ax6V9jRowowUILRHM5Nu7NrSJ/Lu09OR+lQm2lld5YXWRs8xzDg/Q9v1qOykKSox/h5qxZTcZHAJ/Kt4rUOhX+0mN+hiY/wycfr0NPErlhvGM88VovCtwScKx9KozaOy5MLbP9g/dP4dvwqySYTEZRgWTPX0qOa2ZhuUcdqhgujbOVniZCP4gMg/j2/Gteyv4JhtXa6dz6UgMmJ5bcjBI/Gup8NfEPXPDdyk1jfzQlTkAMapS2Ub7iq9vWqwgEZ7UOKYbH1f8AC79si+hWK08QRreoMDzfuvj6/wCNfTHhD4reG/GsafYNQjWdh/x7zEK/4ev4V+X4/cgMCPXOa1dN8XX2mFTbzsjKc8HivMrZfSqax0Ybn6tZpa+Efh3+134i8L+Vb6kBqtkvBSY5YD2bqK+n/AP7Q/hHx3HGiXo028YcwXhCjPs3Q/pXh1sJVo6tXQHp9FNR1kUMpDKRkEHIIp1cQgrlvGPxN8N+BIS2r6nFDNjK2sfzzN9EHP4nAr5T8d/tS6/rgkihuRolmeBDZ5EjD3k+9+WK8U1X4iwzSSModpmJLSSMSSfXnr+NezRy2UtarsOx9O+N/wBrW9mEkPh3T1sIegu7vDyH3C/dH45r518YePNa8VXj3F9ezX0x/ilfOPp2A+lefaj4jmnPmyTFgegzwKwp9bkLZWfcx/hBJP6V7NLD0qPwoDo7oNOxMy4b14rPl0+FvmMmBnoKyk1qbJDRvL65i7fU4qX+0bmY4t7TYp6tM4UZ+gya6rrsI0BZ2wyN7Y9SKp3dvaAFhKMd88D86ru1xJxc3+0E/dgQDj6nNQrp9qDnJlPXMjFv50b9AK8lzACUgD3BH/PMZB/HpTobS8mP3ltgecAb2/Xj9KuHZEueFx0FVZr5i21eF6HBqbD9CU6bG53TSSXDd/NbI/LpTvKA+VFG0dgKriYk43EN6ZpXuSyhRwO+OpppWEOlIjjIU5Y9SKzXUNIO2epxV1nJPvVeSMAjGKaAVz5UW0AgsMCqOWVuDypIyelX1USDoc4xVe5iCTYAwrAAcelRJDRJ98Co2HPTr0NET4AHb1qcKCAO1JDZTMYbr09aqzxCRSrDKH3rTaNeRUMkA2/MM4OMUWvuI4zWtGkRfMiXeR3HJ/8Ar1zLQP8Adxyeg7ivU5YgykY9ulc7q3hqO6LSRsVk/Q14uIy5S9+jo+3Qvmv8Ry1kWkfyxl5i2Bk8OBg4HvwaRdYkiZsghGQ7tvJ6dfoeM1YvtKl01cgMOm10zkEVUmhe4LMUwzg52gDOa8CcZU3yzVilFvYfa6skMTls7hu+QnI+b071p6J41utG1W3uoUUPHLGwL57Nzz7gnNZ0GjXFySsa7VPByO1bNn4Gmul++EGeFALfU1zSqQW5vGlOWxm310tzdSvC6+UHaRFd9u0E5xnv+FVfNZQW+0BpN2WUcdRjjj0rpD4F8slfNOfcYFNbwgxUkuCTx1zUqtEv6tM5q+m/fR4diCi4B4x1qBjNNtQsVTBPPqe/8q6b/hEbmPb8ocHtjP0rRt/CSRwh7htp7L6VXtU9FuH1eXU5WIXEshLPg42qO6jgYHtgV0Gm6E0sm/aoHc+la1pocXmqSgCDpx1+tbK2iqNqoF/3a+hwuWuaU6/3f5nPKShpAhtbSG0UBQM9ye9WcpIeOnTHvUD27qehPpU9vA2/gdR39a+ijFRSSWhhcspGewyasQ2wCndUlvAU5PA74qeVBt649cVpayGV43COwzkYIx9auW6bFU54qlBt8xtwyc8CrQn6Y6UogyzvwwI4FWEuC3yk5FZwl9MkGl3kHIIzVBc0tiynOOcdO1V5NLikJIGx+mVODj8KZFdGMgY4qytyCOeDnrQBEq31qo8mdZQOizDp+I/rSXOotn99bvA4/iAyh/EVbEoIzTg45B9KQFezmXUVCq6H6NWlb6QXbG8Z9CeazZbO3mOWjUsO44P51ELN4WBgupo9vRS24frQI30shC+CR+NbOnyNYlWVxj2NcdLqd+FIZYbgdmBKsP5iok1aVhicvGRzkjj8xTCx9LfDv43eIPCpjistRM1svW0uTvTHsDyPwr6J8GftHaFroSDV0bRrs4G9juhY/wC91H4/nX542etkqGik3D2Oa6jSPHMkGEkfKDsxzXBWwdKtraz8h2PP7zXzcMxjDyt/fY8fn/hWfNLPKSZH68/IMfr1pCPXn8aTcCPXNdfqIgYjOT87epOaljkwv6c02Zc81GhCjrnNNCLkV4V6gdcUk94zDaOPcVXxnqMUxlIOD0qgF8ws2MmneZt6E/X0qMoVGce44pSDnjpQA2aZiD1IzUW4k/Tp6U9hk4796ckYzk8gHpmkgDcSOhH4UqMTnIyakXCYyOvJppPUngHrimPYcPmPP5CmqcZ6YPGaQyY4yABSeYPvAZ70ASr1IzgZ4qK8jLx5xkqcjNKHxgjgikdy55+tDVxFRSG5UYHSpUOeeT7VHsKEqBjnI96WI7SAMn+dZ2K3JdxGDQxyTjoex7UwcYz68gU4YPbIPH1qhETgHnPHp0qNl4x1qaRQ3WoWYBsY6fpQ7CIZLaORSGUdOhqoNLRASij6EcVp7CV56/SkEfJHA4rCrRhWjyzV0XGTi7ooxsIwFkiAI71LBqLWzZjUgdx2qxMiRxF5GWOJeS8nAFZzy204+Usn+0Tgke47V8xisns/3Mvkz0aeLt8SLqXbXDcqAfSrCJgZKjPrms7yXjHyeYf9rIx+tWIFlC/6wPJ/dX+EetecspxN0tPvOn63TtdlqScRL0GTyM81XEbSHe5z/s9gKmW2OAWYsT1JqcWnWvqMFllLC+89Zd/8jzq2IlV0WiIUTaRjBqxHJwe/1prwlQR3pqLjPBr2TjNK2RLk/MOR78VcW1RBkZrIgLIwxkVoxzMyjJ5pjRPIpAzjIqrcvt4HIxipGmIAHQ1SnfkH9PSlJ6FEltAXywJOTj8asiFgD+ootnCRKAo9c+5p5uABjjg9acdCRBCSeDilEfr9aZ9o56ZxSGbqQSM9qYE+MD+tAYA5/Cq7T9x+WaY8xb/9VIC4bjbwc49qQ3OMYJqi0hwAD+FOZs857UDLTXbDuMU1r045zmqjvx+PFRMx47GgLl37ec8de1NF2xH3qpEkjk5x6U9Dk96QFlnWVslRkfxDilSaRDnd5ox0c8/nUaAsM1IkfOcfXNKwj//Z" alt="Jonathan Mayanan">
+      <img src="profile.jpg" alt="Jonathan Mayanan">
       <div class="photo-badge">Philadelphia, PA</div>
     </div>
   </div>
@@ -812,7 +846,7 @@
   <h2>The person behind<br>the work</h2>
   <div class="about-grid fade-up">
     <div class="about-text">
-      <p>I'm an Engineering Technician based in the Philadelphia area with over 7 years of hands-on experience keeping complex electrical and mechanical systems running at peak performance. My background spans Amazon fulfillment centers, utility infrastructure, and GMP-regulated pharmaceutical environments.</p>
+      <p>I'm an Electrical Engineer based in the Philadelphia area with over 7 years of hands-on experience keeping complex electrical and mechanical systems running at peak performance. My background spans Amazon fulfillment centers, utility infrastructure, and GMP-regulated pharmaceutical environments.</p>
       <p>I hold a Bachelor of Science in Electrical and Computer Engineering Technology from NJIT and carry certifications in OSHA 10 and NFPA 70E electrical safety. I specialize in troubleshooting 3-phase electrical systems, VFDs, motor controls, conveyor automation, and building infrastructure.</p>
       <p>Outside of engineering, I'm deeply involved in live event and AV production — operating PTZ camera systems, video switchers, audio systems, and live streaming setups for church and venue environments. I bring the same technical precision to both worlds.</p>
     </div>
@@ -843,30 +877,37 @@
         <span class="tag">Switchgear</span>
         <span class="tag">UPS / PDUs</span>
         <span class="tag">Transformers</span>
+        <span class="tag">Batteries</span>
+        <span class="tag">Motor Controls</span>
+        <span class="tag">VFDs & Starters</span>
+        <span class="tag">Relays</span>
+        <span class="tag">PLC Fundamentals</span>
         <span class="tag">NFPA 70E</span>
         <span class="tag">NEC Code</span>
       </div>
     </div>
     <div class="skill-card">
-      <h3>Mechanical & Controls</h3>
+      <h3>Mechanical & Facilities</h3>
       <div class="skill-tags">
-        <span class="tag">VFDs</span>
-        <span class="tag">Motor Controls</span>
-        <span class="tag">PLCs</span>
-        <span class="tag">Conveyor Systems</span>
         <span class="tag">HVAC / Chillers</span>
         <span class="tag">Pumps & Motors</span>
+        <span class="tag">Conveyor / MHE</span>
+        <span class="tag">Fire/Life Safety</span>
+        <span class="tag">Preventive Maintenance</span>
+        <span class="tag">Root Cause Analysis</span>
       </div>
     </div>
     <div class="skill-card">
-      <h3>Operations & Safety</h3>
+      <h3>Tools & Documentation</h3>
       <div class="skill-tags">
         <span class="tag">CMMS / Work Orders</span>
-        <span class="tag">Root Cause Analysis</span>
-        <span class="tag">LOTO</span>
+        <span class="tag">Multimeters / Meggars</span>
+        <span class="tag">Blueprint Reading</span>
+        <span class="tag">Technical Writing / SOPs</span>
+        <span class="tag">Microsoft Office Suite</span>
         <span class="tag">OSHA 10</span>
         <span class="tag">GMP</span>
-        <span class="tag">PM Programs</span>
+        <span class="tag">LOTO</span>
       </div>
     </div>
     <div class="skill-card">
@@ -895,14 +936,15 @@
         <div class="exp-company">PCI Pharma Services</div>
       </div>
       <div class="exp-content">
-        <h3>Engineering Technician</h3>
+        <h3>Engineer</h3>
         <div class="exp-location">Philadelphia, PA</div>
         <ul class="exp-bullets">
-          <li>Led installation, commissioning, and validation of packaging equipment in a GMP-regulated facility</li>
-          <li>Performed troubleshooting and root cause analysis on electrical and mechanical failures within SLA requirements</li>
-          <li>Conducted Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) for capital equipment projects</li>
-          <li>Provided hands-on training to mechanical technicians on equipment operation and safety protocols</li>
-          <li>Coordinated with engineering teams, vendors, and customers during project installations</li>
+          <li>Led installation, setup, commissioning, and validation of packaging equipment including mechanical, electrical, and control instrumentation systems in a GMP-regulated facility</li>
+          <li>Performed troubleshooting and root cause analysis on electrical and mechanical equipment failures, restoring operations within internal SLAs to minimize production downtime</li>
+          <li>Conducted Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) for capital equipment projects, ensuring systems met performance and safety specifications</li>
+          <li>Provided subject matter expertise and hands-on training to mechanical technicians on equipment operation, maintenance procedures, and safety protocols</li>
+          <li>Managed equipment safety evaluations and performance testing, documenting results to support change management and regulatory compliance programs</li>
+          <li>Coordinated with cross-functional engineering teams, vendors, and customers during project meetings and on-site installations</li>
         </ul>
       </div>
     </div>
@@ -913,13 +955,14 @@
         <div class="exp-company">Maryland Transportation Authority</div>
       </div>
       <div class="exp-content">
-        <h3>Electrical Technician</h3>
+        <h3>Electrical Engineer</h3>
         <div class="exp-location">Baltimore, MD</div>
         <ul class="exp-bullets">
-          <li>Installed and maintained 3-phase distribution systems including switchgear, panelboards, and transformers</li>
-          <li>Performed maintenance on lighting systems, pump motor controls, and electrical equipment at tunnel facilities</li>
-          <li>Executed electrical work in 24/7 mission-critical environments across the Baltimore Harbor Tunnel system</li>
-          <li>Ensured all installations met NEC code requirements and coordinated with project engineers on compliance</li>
+          <li>Installed, tested, and maintained 3-phase electrical distribution systems including switchgear, panelboards, transformers, feeders, and conduit runs across multiple critical infrastructure sites</li>
+          <li>Performed maintenance and troubleshooting on lighting systems, lighting contactors, pump motor controls, and electrical equipment in tunnel vaults, service buildings, and emergency facilities</li>
+          <li>Executed electrical work in mission-critical environments requiring 24/7 operational reliability for the Baltimore Harbor Tunnel system</li>
+          <li>Ensured all installations met NEC code requirements and organizational safety standards; coordinated with project engineers on scope, scheduling, and compliance documentation</li>
+          <li>Supported emergency electrical repairs and preventive maintenance programs to maintain continuous tunnel operations and public safety systems</li>
         </ul>
       </div>
     </div>
@@ -930,13 +973,15 @@
         <div class="exp-company">Amazon / JLL</div>
       </div>
       <div class="exp-content">
-        <h3>Reliability Maintenance Engineering Technician II</h3>
+        <h3>Reliability Engineer</h3>
         <div class="exp-location">Florence, NJ</div>
         <ul class="exp-bullets">
-          <li>Maintained and troubleshot mission-critical conveyor and robotic automation systems in a high-volume fulfillment center</li>
-          <li>Installed and repaired 3-phase motors, VFDs, control components, sensors, and relay systems</li>
-          <li>Led preventive maintenance audits driving reliability improvements and reducing unplanned downtime</li>
-          <li>Created and tracked work orders in CMMS with detailed documentation and root cause findings</li>
+          <li>Maintained and troubleshot mission-critical conveyor and robotic automation systems in a high-volume Amazon fulfillment center, ensuring 24/7 operational availability</li>
+          <li>Installed, maintained, and repaired 3-phase motors, VFDs, motor starters, control components, photo-eyes, limit switches, proximity sensors, solenoids, and relay systems</li>
+          <li>Led and audited preventive maintenance procedures for electrical and mechanical equipment, driving reliability improvements and reducing unplanned downtime</li>
+          <li>Created, tracked, and closed work orders in CMMS with detailed documentation of labor hours, parts usage, equipment conditions, and root cause findings</li>
+          <li>Developed training plans for incoming service technicians and created emergency repair work plans for critical asset failures</li>
+          <li>Maintained building rounds monitoring and recording data from electrical, mechanical, and control systems to support operational decision-making and KPI reporting</li>
         </ul>
       </div>
     </div>
@@ -947,12 +992,14 @@
         <div class="exp-company">Amazon / C&W Services</div>
       </div>
       <div class="exp-content">
-        <h3>Maintenance Technician II</h3>
+        <h3>Reliability Engineer</h3>
         <div class="exp-location">Carteret, NJ</div>
         <ul class="exp-bullets">
-          <li>Performed preventive maintenance and troubleshooting on MHE including conveyor belts, motors, and control systems</li>
-          <li>Managed department inventory tracking ensuring maintenance teams had access to critical spare parts</li>
-          <li>Promoted safe working environments enforcing LOTO, confined space, and electrical safety protocols</li>
+          <li>Performed preventive maintenance and emergency troubleshooting on Material Handling Equipment including conveyor belts, motors, photo-eyes, relays, and control systems in a 24/7 fulfillment facility</li>
+          <li>Completed preventive maintenance routines with thorough documentation, tracking equipment conditions and identifying recurring issues for root cause analysis</li>
+          <li>Troubleshot electrical and mechanical failures on production-critical systems, minimizing downtime and restoring operations within established SLAs</li>
+          <li>Managed department inventory tracking and parts storage, ensuring maintenance teams had access to critical spare parts and consumables</li>
+          <li>Promoted and enforced a safe working environment by following all safety procedures including lockout/tagout (LOTO), confined space, and electrical safety protocols</li>
         </ul>
       </div>
     </div>
@@ -986,7 +1033,7 @@
       <p>Portable and permanent lighting solutions for auditoriums, sanctuaries, and live event venues. Equipment selection, positioning, and control for optimal stage presence.</p>
     </div>
   </div>
-  <p style="color: var(--muted); font-size: 0.9rem;">Available for church services, corporate events, and live productions in the greater Philadelphia area. <a href="#contact" style="color: var(--gold); text-decoration: none;">Contact me to discuss your project.</a></p>
+  <p style="color: #4a4a5a; font-size: 0.9rem;">Available for church services, corporate events, and live productions in the greater Philadelphia area. <a href="#contact" style="color: #1a1a2e; text-decoration: none; font-weight: 500;">Contact me to discuss your project.</a></p>
 </section>
 
 <!-- EDUCATION -->
@@ -1014,7 +1061,7 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
-  <div class="section-label" style="color: var(--gold-light);">Contact</div>
+  <div class="section-label" style="color: #ffffff;">Contact</div>
   <h2>Let's connect</h2>
   <div class="contact-grid fade-up">
 
@@ -1046,7 +1093,7 @@
         3. Replace YOUR_FORM_ID below with that ID
         Example: action="https://formspree.io/f/xpwzabcd"
       -->
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/maqpvgbo" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First name</label>
@@ -1138,7 +1185,7 @@ form.addEventListener('submit', async (e) => {
     } else {
       throw new Error('Server error');
     }
-  } catch {
+  } catch (err) {
     status.textContent = 'Something went wrong. Please email me directly at Jmayanan@icloud.com';
     status.className = 'form-status error';
     btn.textContent = 'Send Message';
