@@ -698,6 +698,87 @@
   .photo-badge { background: #c9973a; color: var(--navy); }
   .cert-strip .cert-item { border-color: rgba(201,151,58,0.3); }
 
+  /* PORTFOLIO */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .portfolio-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(15,31,61,0.1);
+  }
+  .portfolio-thumb {
+    width: 100%;
+    height: 200px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .portfolio-thumb-placeholder {
+    font-size: 3rem;
+    opacity: 0.6;
+  }
+  .portfolio-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .portfolio-body {
+    padding: 1.5rem;
+  }
+  .portfolio-body h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .portfolio-body p {
+    font-size: 0.88rem;
+    color: #4a4a5a;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .portfolio-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: #3a3a4a;
+    letter-spacing: 0.03em;
+  }
+  .portfolio-link {
+    font-size: 0.85rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .portfolio-link:hover { color: var(--gold-light); }
+  @media (max-width: 600px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-thumb { height: 180px; }
+  }
+
   /* SCROLL ANIMATIONS */
   .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -711,6 +792,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#services">Available Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -723,6 +805,7 @@
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#experience" onclick="closeMenu()">Experience</a>
   <a href="#services" onclick="closeMenu()">Available Services</a>
+  <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
   <a href="#education" onclick="closeMenu()">Education</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
@@ -1013,14 +1096,24 @@
   <h2>Available<br>services</h2>
   <div class="services-grid fade-up">
     <div class="service-card">
-      <span class="service-icon">&#x1F3A5;</span>
-      <h3>PTZ Camera Systems</h3>
-      <p>Setup, configuration, and live operation of PTZ cameras including VISCA over IP control, auto-tracking, and multi-camera switching for live events and streams.</p>
+      <span class="service-icon">&#x1F4F9;</span>
+      <h3>IP Camera Configuration</h3>
+      <p>End-to-end IP camera system design, installation, and configuration. Protocol expertise including ONVIF, VISCA over IP, VISCA, Pelco-D, Pelco-P, and more. Network planning, RTSP streaming, PoE switching, NVR integration, remote viewing, and multi-camera surveillance layouts for churches, businesses, and residential properties.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">&#x1F39B;</span>
-      <h3>Audio Setup & Diagnostics</h3>
-      <p>Setup, configuration, and troubleshooting of audio systems for live events and venues. Signal flow tracing, cable diagnostics, speaker placement, gain staging, and resolving feedback and noise issues.</p>
+      <span class="service-icon">&#x1F4A1;</span>
+      <h3>Lighting & Stage Setup</h3>
+      <p>Portable and permanent lighting solutions for auditoriums, sanctuaries, and live event venues. Equipment selection, positioning, and control for optimal stage presence.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F310;</span>
+      <h3>Website Design</h3>
+      <p>Custom website design and development for small businesses, churches, and professionals. Clean, modern, mobile-responsive sites built to showcase your brand and connect with your audience.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">&#x1F3A5;</span>
+      <h3>PTZ Camera Systems</h3>
+      <p>Setup, configuration, and live operation of PTZ cameras including VISCA over IP control, auto-tracking, and multi-camera switching for live events and streams. Camera joystick controller configuration and integration for precise, hands-on camera control.</p>
     </div>
     <div class="service-card">
       <span class="service-icon">&#x1F4FA;</span>
@@ -1028,16 +1121,59 @@
       <p>Multi-source video production using hardware switchers and OBS. Live streaming configuration, encoding, and broadcast to platforms including YouTube and Facebook Live.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">&#x1F4A1;</span>
-      <h3>Lighting & Stage Setup</h3>
-      <p>Portable and permanent lighting solutions for auditoriums, sanctuaries, and live event venues. Equipment selection, positioning, and control for optimal stage presence.</p>
+      <span class="service-icon">&#x1F39B;</span>
+      <h3>Audio Setup & Diagnostics</h3>
+      <p>Setup, configuration, and troubleshooting of audio systems for live events and venues. Signal flow tracing, cable diagnostics, speaker placement, gain staging, and resolving feedback and noise issues.</p>
     </div>
   </div>
-  <p style="color: #4a4a5a; font-size: 0.9rem;">Available for church services, corporate events, and live productions in the greater Philadelphia area. <a href="#contact" style="color: #1a1a2e; text-decoration: none; font-weight: 500;">Contact me to discuss your project.</a></p>
+  <p style="color: #4a4a5a; font-size: 0.9rem;">Available for church services, corporate events, live productions, IP camera installations, and website design in the greater Philadelphia area. <a href="#contact" style="color: #1a1a2e; text-decoration: none; font-weight: 500;">Contact me to discuss your project.</a></p>
+</section>
+
+<!-- WEBSITE DESIGN PORTFOLIO -->
+<section id="portfolio" style="background: var(--white);">
+  <div class="section-label">Portfolio</div>
+  <h2>Website design<br>work</h2>
+  <div class="portfolio-grid fade-up">
+
+    <div class="portfolio-card">
+      <div class="portfolio-thumb">
+        <span class="portfolio-thumb-placeholder">&#x1F3E2;</span>
+        <!-- Replace with: <img src="portfolio-business.jpg" alt="Small Business Site"> -->
+      </div>
+      <div class="portfolio-body">
+        <h3>Small Business Site</h3>
+        <p>A clean, professional website for a local business with service pages, contact forms, testimonials, and Google Maps integration.</p>
+        <div class="portfolio-tags">
+          <span class="portfolio-tag">HTML/CSS</span>
+          <span class="portfolio-tag">JavaScript</span>
+          <span class="portfolio-tag">SEO</span>
+        </div>
+        <a href="#" class="portfolio-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="portfolio-thumb">
+        <span class="portfolio-thumb-placeholder">&#x1F4BC;</span>
+        <!-- Replace with: <img src="portfolio-portfolio.jpg" alt="Professional Portfolio"> -->
+      </div>
+      <div class="portfolio-body">
+        <h3>Professional Portfolio</h3>
+        <p>A personal portfolio website designed to highlight experience, skills, and project work — similar in spirit to this very site.</p>
+        <div class="portfolio-tags">
+          <span class="portfolio-tag">HTML/CSS</span>
+          <span class="portfolio-tag">Responsive</span>
+          <span class="portfolio-tag">Animation</span>
+        </div>
+        <a href="#" class="portfolio-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education" style="background: var(--white);">
+<section id="education" style="background: var(--cream);">
   <div class="section-label">Education & Credentials</div>
   <h2>Academic &<br>professional training</h2>
   <div class="edu-block fade-up">
